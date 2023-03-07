@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
+
+.MuiSvgIcon-root {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
