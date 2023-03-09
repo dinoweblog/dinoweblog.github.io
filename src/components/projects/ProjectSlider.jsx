@@ -10,6 +10,7 @@ import {
 } from "../../app/index";
 import ProjectCard from "./ProjectCard";
 import { Box } from "@mui/material";
+import { projectData } from "./constant";
 
 const SliderDiv = styled(Slider)`
   margin: auto;
@@ -38,7 +39,7 @@ const SliderDiv = styled(Slider)`
     padding: 0 20% 0 0 !important;
   }
   .slick-slide {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .slick-list {
     padding: 0 20% 0 0;
@@ -66,10 +67,6 @@ export const ProjectSlider = () => {
     sliderRef.current.slickPrev();
   };
 
-  const handleAllProjects = () => {
-    console.log("all");
-  };
-
   const settings = {
     infinite: false,
     speed: 500,
@@ -79,7 +76,7 @@ export const ProjectSlider = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 1,
         },
@@ -102,8 +99,8 @@ export const ProjectSlider = () => {
   return (
     <Box>
       <SliderDiv ref={(slider) => (sliderRef.current = slider)} {...settings}>
-        {[1, 2, 3, 4].map(() => (
-          <ProjectCard />
+        {projectData.map((project) => (
+          <ProjectCard data={project} />
         ))}
       </SliderDiv>
 
@@ -116,7 +113,7 @@ export const ProjectSlider = () => {
           right: 0,
         }}
       >
-        <IconButton onClick={handleAllProjects}>All</IconButton>
+        <IconButton to={"/projects"}>All</IconButton>
         <IconButton
           icon={<MdKeyboardDoubleArrowLeft />}
           onClick={handlePrevious}

@@ -3,13 +3,14 @@ import { primary } from "../../app/uiCore/themeColor";
 import { RxPause, BsTelephoneFill, FiMail } from "../../app/index";
 import CircleBorder from "../../design/CircleBorder2";
 import IconButton from "./IconButton";
-import SocialMedia from "../../design/SocialMedia";
 import Logo from "../header/Logo";
+import SocialIconRow from "./SocialIconRow";
 
 const style = {
   position: "absolute",
   width: "400px",
   height: "400px",
+  display: { xs: "none", sm: "block" },
   top: -200,
 };
 
@@ -99,21 +100,7 @@ const Footer = () => {
               dinoweblog@gmail.com
             </IconButton>
           </Box>
-          <SocialMedia
-            style={{
-              position: "static",
-              borderColor: "#3b3d49",
-              fontSize: { xs: 16 },
-              minWidth: { xs: 45, sm: 45, md: 60 },
-              minHeight: { xs: 45, sm: 45, md: 60 },
-            }}
-            sx={{
-              display: "flex",
-              gap: { xs: 4, md: 2, lg: 4 },
-              width: "100%",
-              justifyContent: { sm: "start", lg: "end" },
-            }}
-          />
+          <SocialIconRow />
         </Box>
       </Box>
       <Divider color="#3b3d49" />

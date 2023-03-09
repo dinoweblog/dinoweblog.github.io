@@ -76,6 +76,7 @@ const AboutMeInfo = ({ isShow }) => {
                 color: primary,
               },
             }}
+            to={"/about"}
           >
             Education
           </CustomButton>

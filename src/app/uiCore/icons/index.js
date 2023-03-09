@@ -8,6 +8,7 @@ import { FiMail, FiLink } from "react-icons/fi";
 import {
   MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowLeft,
+  MdOutlineMiscellaneousServices,
 } from "react-icons/md";
 import { RxPause } from "react-icons/rx";
 import {
@@ -43,4 +44,5 @@ export {
   FiLink,
   MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowLeft,
+  MdOutlineMiscellaneousServices,
 };

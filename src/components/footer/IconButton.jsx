@@ -2,7 +2,7 @@ import { Link, Typography } from "@mui/material";
 import { primary } from "../../app/index";
 import { CustomButton } from "../button";
 
-const IconButton = ({ icon, href, children, isIcon, onClick }) => {
+const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
   return (
     <Link
       sx={{
@@ -21,6 +21,7 @@ const IconButton = ({ icon, href, children, isIcon, onClick }) => {
     >
       <CustomButton
         onClick={onClick}
+        to={to}
         icon={icon}
         style={{
           width: { xs: "2rem", sm: "4rem", md: "5rem" },

@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { KeyboardDoubleArrowRight, Terminal } from "@mui/icons-material";
 import { primary } from "../../app/uiCore/themeColor";
-import { BsCodeSlash } from "../../app/index";
 import CircleBorder from "../../design/CircleBorder2";
 
 const d = [
@@ -29,12 +28,19 @@ const SkillsCard = ({ data }) => {
         p: "3rem",
         overflow: "hidden",
         position: "relative",
+        height: { xs: 580, sm: 580, md: 620 },
       }}
     >
-      <BsCodeSlash style={{ fontSize: 80 }} />
-
-      <Typography variant="h2" mt={3}>
-        Development
+      {data.icon}
+      <Typography
+        variant="h3"
+        mt={3}
+        sx={{ color: (theme) => theme.palette.secondary.main }}
+      >
+        {data.subTitle}
+      </Typography>
+      <Typography variant="h2" mt={1}>
+        {data.title}
       </Typography>
 
       <List
@@ -44,7 +50,7 @@ const SkillsCard = ({ data }) => {
           pt: 2,
         }}
       >
-        {d.map((s) => (
+        {data.skills.map((s) => (
           <ListItem sx={{ fontSize: "1rem", p: 0, pt: 0.5 }}>
             <ListItemIcon>
               <KeyboardDoubleArrowRight

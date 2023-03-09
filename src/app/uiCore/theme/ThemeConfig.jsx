@@ -30,7 +30,7 @@ const ThemeConfig = {
     },
     h2: {
       fontWeight: 600,
-      fontSize: "2.2rem",
+      fontSize: { xs: "2rem", sm: "2rem", md: "2.2rem" },
       lineHeight: 1.25,
       letterSpacing: "0.0025em",
       color: "#fff",

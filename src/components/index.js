@@ -4,9 +4,12 @@ import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
 import Home from "./home/Home";
 import WorkExperience from "./workExperience/WorkExperience";
-import About from "./about/About";
 import Services from "./services/Services";
-import AboutMeInfo from "./about/AboutMeInfo";
+import ProjectCard from "./projects/ProjectCard";
+import SkillsCard from "./skills/SkillsCard";
+import { About, AboutMeInfo, Education, Experience } from "./about";
+import Contact from "./contact/Contact";
+import SocialIconRow from "./footer/SocialIconRow";
 
 export {
   Home,
@@ -18,4 +21,10 @@ export {
   Services,
   About,
   AboutMeInfo,
+  Education,
+  Experience,
+  ProjectCard,
+  SkillsCard,
+  Contact,
+  SocialIconRow,
 };

@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { CustomButton } from "../button";
-import { techStack } from "./constant";
 import IconHoverWithName from "./IconHoverWithName";
 import {
   primary,
@@ -9,9 +8,10 @@ import {
   TbExternalLink,
 } from "../../app/index";
 
-const ProjectCard = () => {
+const ProjectCard = ({ data, sx }) => {
+  console.log(data);
   return (
-    <Box sx={{ mb: { xs: 10, sm: 15, md: 0 } }}>
+    <Box sx={{ mb: { xs: 10, sm: 15, md: 0 }, ...sx }}>
       <Box
         sx={{
           width: "100%",
@@ -23,7 +23,8 @@ const ProjectCard = () => {
       >
         <Box
           component="img"
-          src="./assets/projects/bebodywiseclone.png"
+          alt={data.title}
+          src={data.image}
           sx={{
             transform: "translate(-50%,-50%) rotate(-45deg)",
             position: "absolute",
@@ -46,7 +47,7 @@ const ProjectCard = () => {
 
         <Box
           sx={{
-            p: { xs: 6, sm: 10, md: 10, lg: 15 },
+            p: { xs: 6, sm: 10, md: 8, lg: 14 },
             zIndex: 20,
             width: "100%",
             position: "absolute",
@@ -54,7 +55,8 @@ const ProjectCard = () => {
         >
           <Box
             component="img"
-            src="./assets/projects/bebodywiseclone.png"
+            alt={data.title}
+            src={data.image}
             sx={{
               width: "100%",
             }}
@@ -64,7 +66,7 @@ const ProjectCard = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography variant="h2" mb={2}>
-          Be Bodywise Clone Website
+          {data.title}
         </Typography>
         <Typography
           variant="body2"
@@ -72,9 +74,7 @@ const ProjectCard = () => {
             color: (theme) => theme.palette.secondary.main,
           }}
         >
-          An e-commerce website for health related products. A collaborative
-          project built by a team of 5 executed in 6 days. We added features
-          like Off Canvas Popup cart, cart manipulation & End to End Flow etc.
+          {data.description}
         </Typography>
         <Box
           sx={{
@@ -87,7 +87,7 @@ const ProjectCard = () => {
           }}
         >
           <Typography variant="body2">Tech Stack :</Typography>
-          {techStack.map((icon) => (
+          {data.techStack?.map((icon) => (
             <IconHoverWithName icon={icon} />
           ))}
         </Box>

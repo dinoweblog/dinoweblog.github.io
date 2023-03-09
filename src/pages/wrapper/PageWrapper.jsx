@@ -1,8 +1,22 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { primary, RxPause, secondary } from "../../app/index";
-import useRedirect from "../../components/useRedirect/useRedirect";
+import CircleBorder from "../../design/CircleBorder2";
+import TextButton from "./TextButton";
 
-const PageWrapper = ({ children }) => {
+const style = {
+  position: "absolute",
+  width: "450px",
+  height: "450px",
+  display: { xs: "none", sm: "block" },
+};
+
+const PageWrapper = ({ children, pageTitle, page }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageTitle]);
+
   return (
     <Box>
       <Box
@@ -12,9 +26,11 @@ const PageWrapper = ({ children }) => {
           width: "100%",
           pt: 20,
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <Typography variant="h1">About Us</Typography>
+        <Typography variant="h1">{pageTitle}</Typography>
         <Box
           sx={{
             display: "flex",
@@ -22,25 +38,39 @@ const PageWrapper = ({ children }) => {
             p: 3,
             bgcolor: secondary,
             m: "auto",
-            color: "#fff",
+            color: (theme) => theme.palette.secondary.main,
             gap: 1,
-            maxWidth: 250,
+            maxWidth: 260,
             borderRadius: 35,
             justifyContent: "center",
             mt: 5,
+            cursor: "auto",
           }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              color: (theme) => theme.palette.secondary.main,
-              cursor: "pointer",
-            }}
-          >
-            Home
-          </Typography>
+          <TextButton to="/">Home</TextButton>
           <RxPause />
-          <Typography variant="h4">About</Typography>
+          <TextButton style={{ color: "#fff", cursor: "auto" }}>
+            {page}
+          </TextButton>
+        </Box>
+
+        <Box
+          sx={{
+            ...style,
+            left: -200,
+            top: -220,
+          }}
+        >
+          <CircleBorder style={{ p: 6 }} />
+        </Box>
+        <Box
+          sx={{
+            ...style,
+            right: -200,
+            bottom: -220,
+          }}
+        >
+          <CircleBorder style={{ p: 6 }} />
         </Box>
       </Box>
       {children}

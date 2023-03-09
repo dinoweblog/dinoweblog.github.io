@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Typography, Toolbar } from "@mui/material";
+import { AppBar, Box, Button, Toolbar } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import { Menu } from "@mui/icons-material";
 import DrawerAppBar from "./DrawerAppBar";
@@ -7,12 +7,21 @@ import { navItems } from "./constant";
 import { primary } from "../../app/uiCore/themeColor";
 import HireMeBtn from "./HireMeBtn";
 import Logo from "./Logo";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setOpen((prevState) => !prevState);
+  };
+
+  const handleNavigate = (route) => {
+    if (route === "home") {
+      return navigate(`/`);
+    }
+    navigate(`/${route}`);
   };
 
   return (
@@ -20,7 +29,7 @@ const Header = () => {
       <AppBar
         component="nav"
         sx={{
-          bgcolor: primary,
+          bgcolor: "transparent",
           height: "100px",
           boxShadow: "0",
         }}
@@ -50,6 +59,7 @@ const Header = () => {
                   color: (theme) => theme.palette.secondary.main,
                   fontSize: 20,
                 }}
+                onClick={() => handleNavigate(item.toLowerCase())}
               >
                 {item}
               </Button>

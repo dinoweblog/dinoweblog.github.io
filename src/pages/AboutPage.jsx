@@ -1,24 +1,59 @@
-import { Box } from "@mui/material";
-import { secondary } from "../app/index";
-import { AboutMeInfo } from "../components";
-import PageWrapper from "./wrapper/PageWrapper";
+import { Box, Button } from "@mui/material";
+import { useState } from "react";
+import { primary, secondary } from "../app/index";
+import { AboutMeInfo, Education, Experience } from "../components";
+import { BlockWrapper, PageWrapper } from "./wrapper";
 
 const AboutPage = () => {
+  const [index, setIndex] = useState(1);
+  const handleIndex = (ind) => {
+    setIndex(ind);
+  };
+
   return (
-    <PageWrapper>
-      <Box sx={{ bgcolor: secondary }}>
+    <PageWrapper pageTitle="About Us" page="About">
+      <BlockWrapper>
+        <AboutMeInfo />
+      </BlockWrapper>
+      <BlockWrapper sx={{ bgcolor: primary }}>
         <Box
-          sx={{
-            width: "80%",
-            m: "auto",
-            pt: 15,
-            pb: 15,
-          }}
+          sx={{ height: { xs: "60px", sm: "100px" }, display: "flex", gap: 5 }}
         >
-          <AboutMeInfo />
+          <Button
+            sx={{
+              width: "100%",
+              borderRadius: 0,
+              fontSize: { xs: "1.1rem", sm: "2rem", md: "3rem" },
+              bgcolor: index === 1 ? secondary : "transparent",
+              borderColor: index === 1 ? primary : "#3b3d49",
+              "&:hover": {
+                borderColor: "#3b3d49",
+              },
+            }}
+            variant="outlined"
+            onClick={() => handleIndex(1)}
+          >
+            Education
+          </Button>
+          <Button
+            sx={{
+              width: "100%",
+              borderRadius: 0,
+              fontSize: { xs: "1.1rem", sm: "2rem", md: "3rem" },
+              bgcolor: index === 2 ? secondary : "transparent",
+              borderColor: index === 2 ? primary : "#3b3d49",
+              "&:hover": {
+                borderColor: "#3b3d49",
+              },
+            }}
+            variant="outlined"
+            onClick={() => handleIndex(2)}
+          >
+            Experience
+          </Button>
         </Box>
-      </Box>
-      <Box sx={{ bgcolor: secondary }}></Box>
+        {index === 1 ? <Education /> : <Experience />}
+      </BlockWrapper>
     </PageWrapper>
   );
 };

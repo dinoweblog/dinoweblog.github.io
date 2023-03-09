@@ -1,12 +1,15 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import ThemeProvider from "./app/uiCore/theme/ThemeProvider";
-import AppLayout from "./AppLayout";
+import AppRoutes from "./Routes";
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        <AppLayout />
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );

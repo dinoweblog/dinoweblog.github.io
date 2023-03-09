@@ -2,52 +2,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from "styled-components";
-import SkillsCard from "../skills/SkillsCard";
 import { Box } from "@mui/material";
-
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  );
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  );
-};
 
 const SliderDiv = styled(Slider)`
   margin: auto;
   width: 100%;
-  margin-top: 20px;
-  .skills_card {
-    width: 450px;
-  }
-  @media (max-width: 798px) {
-    .skills_card {
-      width: 220px;
-    }
-  }
-  @media (max-width: 520px) {
-    .skills_card {
-      width: 180px;
-    }
-  }
-
-  img {
-    width: 100%;
-  }
+  height: 100%;
 
   .slick-list {
     margin: 0 -0px;

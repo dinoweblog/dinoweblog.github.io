@@ -13,7 +13,6 @@ const Home = () => {
         height: { xs: "auto", sm: "auto", md: "100vh" },
         overflow: "hidden",
         position: "relative",
-        mt: { xs: 4, sm: 4, md: 10 },
         pb: { xs: 10, sm: 10, md: 0 },
       }}
     >
@@ -23,6 +22,7 @@ const Home = () => {
           m: "auto",
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
+          mt: { xs: 4, sm: 4, md: 10 },
         }}
       >
         <Box flex={1} sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
