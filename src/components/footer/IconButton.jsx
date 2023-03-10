@@ -22,7 +22,7 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
       <CustomButton
         onClick={onClick}
         to={to}
-        icon={icon}
+        endIcon={icon}
         style={{
           width: { xs: "2rem", sm: "4rem", md: "5rem" },
           height: { xs: "2rem", sm: "4rem", md: "5rem" },

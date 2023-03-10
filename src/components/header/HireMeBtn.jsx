@@ -13,7 +13,7 @@ const HireMeBtn = ({ style }) => {
       }}
       icon={<KeyboardDoubleArrowRight />}
     >
-      Hire Me
+      Resume
     </CustomButton>
   );
 };

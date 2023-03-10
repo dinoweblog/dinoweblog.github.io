@@ -1,12 +1,17 @@
 import { Box } from "@mui/material";
-import { experience } from "../constants";
+import { experienceData } from "../../workExperience";
+import ExperienceCard from "../../workExperience/ExperienceCard";
 import ContentCard from "../education/ContentCard";
 
 const Experience = () => {
   return (
     <Box sx={{ mt: 10 }}>
-      {experience.map((data) => (
-        <ContentCard data={data} />
+      {experienceData.map((data) => (
+        <ContentCard date={data.date}>
+          <Box flex={6}>
+            <ExperienceCard data={data} />
+          </Box>
+        </ContentCard>
       ))}
     </Box>
   );

@@ -7,8 +7,8 @@ import ServicesCard from "./ServicesCard";
 const Services = () => {
   return (
     <Wrapper
-      page="My Services"
-      title="Provided Service For My Clients."
+      page="My Working Areas"
+      title="I Work On that"
       color={primary}
       style={{ width: "80%" }}
     >

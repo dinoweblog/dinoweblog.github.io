@@ -40,7 +40,7 @@ const Footer = () => {
             <RxPause /> {` Contact Me`}
           </Typography>
           <Typography variant="h1" mt={4}>
-            Reach Out To Me
+            I Will Be Glad To Connect With You
           </Typography>
         </Box>
 

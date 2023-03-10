@@ -1,27 +1,24 @@
 import { AppBar, Box, Button, Toolbar } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import { Menu } from "@mui/icons-material";
+import { KeyboardDoubleArrowRight, Menu } from "@mui/icons-material";
 import DrawerAppBar from "./DrawerAppBar";
 import { useState } from "react";
 import { navItems } from "./constant";
-import { primary } from "../../app/uiCore/themeColor";
-import HireMeBtn from "./HireMeBtn";
 import Logo from "./Logo";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import ResumeBtn from "../button/ResumeBtn";
+import HashLink from "./HashLink";
+import { useScrollDirection } from "./useScrollDirection";
+import "./style.css";
+import { primary } from "../../app/index";
 
 const Header = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const scrollDirection = useScrollDirection();
 
   const handleDrawerToggle = () => {
     setOpen((prevState) => !prevState);
-  };
-
-  const handleNavigate = (route) => {
-    if (route === "home") {
-      return navigate(`/`);
-    }
-    navigate(`/${route}`);
   };
 
   return (
@@ -29,9 +26,20 @@ const Header = () => {
       <AppBar
         component="nav"
         sx={{
-          bgcolor: "transparent",
+          bgcolor: scrollDirection > 110 ? primary : "transparent",
           height: "100px",
           boxShadow: "0",
+          transition: "all .5s ease",
+          "&.MuiPaper-root":
+            scrollDirection > 110
+              ? {
+                  position: "fixed",
+                  top: 0,
+                }
+              : {
+                  position: "absolute",
+                  top: scrollDirection === 0 ? 0 : -180,
+                },
         }}
       >
         <Toolbar
@@ -51,23 +59,18 @@ const Header = () => {
           >
             <Menu />
           </IconButton>
-          <Box sx={{ display: { xs: "none", sm: "none", md: "flex", gap: 8 } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex", gap: 30 },
+            }}
+          >
             {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  color: (theme) => theme.palette.secondary.main,
-                  fontSize: 20,
-                }}
-                onClick={() => handleNavigate(item.toLowerCase())}
-              >
-                {item}
-              </Button>
+              <HashLink item={item} />
             ))}
           </Box>
-          <HireMeBtn
-            style={{ display: { sm: "none", xs: "none", md: "flex" } }}
-          />
+          <Box sx={{ display: { sm: "none", xs: "none", md: "flex" } }}>
+            <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn>
+          </Box>
         </Toolbar>
       </AppBar>
       <Box component="nav">

@@ -10,6 +10,7 @@ import {
   MdKeyboardDoubleArrowLeft,
   MdOutlineMiscellaneousServices,
 } from "react-icons/md";
+import { ImFilePdf } from "react-icons/im";
 import { RxPause } from "react-icons/rx";
 import {
   SiJest,
@@ -45,4 +46,5 @@ export {
   MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowLeft,
   MdOutlineMiscellaneousServices,
+  ImFilePdf,
 };

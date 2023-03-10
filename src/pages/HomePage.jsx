@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import {
   About,
+  Contact,
   Home,
   Projects,
   Services,
   Skills,
-  WorkExperience,
 } from "../components";
 
 const HomePage = () => {
@@ -20,8 +20,8 @@ const HomePage = () => {
       <Skills />
       <Services />
       <Projects />
-      <WorkExperience />
       <About />
+      <Contact />
     </Box>
   );
 };

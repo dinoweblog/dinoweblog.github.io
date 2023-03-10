@@ -10,6 +10,7 @@ const Projects = () => {
       title="My Complete Projects"
       color={secondary}
       style={{ width: "90%", position: "relative" }}
+      id="projects"
     >
       <Box sx={{ mt: { xs: 15, sm: 15, md: 0 } }}>
         <ProjectSlider />

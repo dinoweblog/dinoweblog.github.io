@@ -25,8 +25,8 @@ const ProfilePicWithIcon = () => {
       />
       <Box
         component="img"
-        src={"./assets/profile-pic.png"}
-        alt="profile-pic"
+        src={"./assets/Profile.png"}
+        alt="profile"
         sx={{
           width: { xs: "85%", sm: "75%", md: "85%" },
           position: "relative",

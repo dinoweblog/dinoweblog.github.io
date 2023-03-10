@@ -6,7 +6,12 @@ import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
   return (
-    <Wrapper page="My Skills" title="Technical Skills" color={secondary}>
+    <Wrapper
+      page="My Skills"
+      title="Technical Skills"
+      color={secondary}
+      id="skills"
+    >
       <ReactSlider sliderSettings={{ bigView: 3 }}>
         {skills.map((item) => (
           <SkillsCard key={item} data={item} />

@@ -2,9 +2,9 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { RxPause } from "../../app/index";
 
-const Wrapper = ({ color, style, page, title, children, textCenter }) => {
+const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
   return (
-    <Box sx={{ bgcolor: color }}>
+    <Box sx={{ bgcolor: color }} id={id}>
       <Box
         sx={{
           width: "80%",

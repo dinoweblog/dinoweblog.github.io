@@ -9,7 +9,6 @@ import {
 } from "../../app/index";
 
 const ProjectCard = ({ data, sx }) => {
-  console.log(data);
   return (
     <Box sx={{ mb: { xs: 10, sm: 15, md: 0 }, ...sx }}>
       <Box

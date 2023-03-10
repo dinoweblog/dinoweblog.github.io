@@ -1,5 +1,10 @@
+import { Download } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
-import { MdKeyboardDoubleArrowRight, primary } from "../../app/index";
+import {
+  MdKeyboardDoubleArrowRight,
+  primary,
+  secondary,
+} from "../../app/index";
 import { CustomButton } from "../button";
 import ResumeBtn from "../button/ResumeBtn";
 
@@ -15,7 +20,7 @@ const AboutMeInfo = ({ isShow }) => {
       <Box
         flex={3}
         sx={{
-          bgcolor: primary,
+          bgcolor: secondary,
           display: "flex",
           flexDirection: "column",
           boxSizing: "border-box",
@@ -27,7 +32,7 @@ const AboutMeInfo = ({ isShow }) => {
       >
         <Box
           component="img"
-          src={"./assets/profile-pic.png"}
+          src={"./assets/Profile.png"}
           sx={{
             width: "60%",
             border: "1px solid",
@@ -36,7 +41,7 @@ const AboutMeInfo = ({ isShow }) => {
             pt: 1,
           }}
         />
-        <ResumeBtn />
+        <ResumeBtn endIcon={<Download />}>Resume</ResumeBtn>
       </Box>
       <Box flex={5}>
         <Typography

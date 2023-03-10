@@ -1,5 +1,6 @@
-import { Box, Typography } from "@mui/material";
-import { primary, secondary } from "../../app/index";
+import { Box, Button, IconButton, Typography } from "@mui/material";
+import { primary, secondary, ImFilePdf } from "../../app/index";
+import ResumeBtn from "../button/ResumeBtn";
 import SocialIconRow from "../footer/SocialIconRow";
 import { contactDetails } from "./constant";
 
@@ -37,6 +38,24 @@ const ContactDetails = ({ sx }) => {
         <SocialIconRow
           sx={{ flexWrap: "wrap", justifyContent: "space-between", gap: 0 }}
         />
+      </Box>
+      <Box
+        sx={{
+          bgcolor: primary,
+          p: 8,
+          mt: 4,
+        }}
+      >
+        <Typography variant="h2" sx={{ mb: 2 }}>
+          Get Resume
+        </Typography>
+
+        <ResumeBtn
+          startIcon={<ImFilePdf />}
+          style={{ height: 30, p: 3, borderRadius: 0 }}
+        >
+          Download Resume
+        </ResumeBtn>
       </Box>
     </Box>
   );

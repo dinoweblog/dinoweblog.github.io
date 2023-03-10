@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { primary } from "../../../app/index";
 
-const ContentCard = ({ data }) => {
+const ContentCard = ({ data, children, date }) => {
   return (
     <Box
       sx={{
@@ -25,39 +25,43 @@ const ContentCard = ({ data }) => {
           variant="body2"
           sx={{ borderRight: "1px solid #fff", pr: 5 }}
         >
-          {data.date}
+          {data ? data.date : date}
         </Typography>
       </Box>
-      <Box
-        flex={6}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 3,
-        }}
-      >
-        <Typography variant="h2">
-          {data?.degree}
-          {data?.position}
-        </Typography>
-        <Typography variant="body2">
-          {data?.university}
-          {data?.company}
-        </Typography>
-        <Typography variant="body2">{data.details}</Typography>
-        {data?.techStack ? (
-          <Typography variant="body2">
-            <Typography
-              component="span"
-              variant="body2"
-              sx={{ fontWeight: 600 }}
-            >
-              Tech Stack:
-            </Typography>
-            {` ${data?.techStack}`}
+      {children ? (
+        children
+      ) : (
+        <Box
+          flex={6}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 3,
+          }}
+        >
+          <Typography variant="h2">
+            {data?.degree}
+            {data?.position}
           </Typography>
-        ) : null}
-      </Box>
+          <Typography variant="body2">
+            {data?.university}
+            {data?.company}
+          </Typography>
+          <Typography variant="body2">{data.details}</Typography>
+          {data?.techStack ? (
+            <Typography variant="body2">
+              <Typography
+                component="span"
+                variant="body2"
+                sx={{ fontWeight: 600 }}
+              >
+                Tech Stack:
+              </Typography>
+              {` ${data?.techStack}`}
+            </Typography>
+          ) : null}
+        </Box>
+      )}
     </Box>
   );
 };

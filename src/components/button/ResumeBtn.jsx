@@ -1,8 +1,7 @@
-import { Download } from "@mui/icons-material";
 import { secondary } from "../../app/index";
 import CustomButton from "./CustomButton";
 
-const ResumeBtn = () => {
+const ResumeBtn = ({ href, style, endIcon, startIcon, children }) => {
   return (
     <CustomButton
       style={{
@@ -12,10 +11,13 @@ const ResumeBtn = () => {
         pl: 5,
         pr: 5,
         height: "60px",
+        ...style,
       }}
-      icon={<Download />}
+      endIcon={endIcon}
+      startIcon={startIcon}
+      href={href}
     >
-      Get Resume
+      {children}
     </CustomButton>
   );
 };

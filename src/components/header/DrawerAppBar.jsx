@@ -1,3 +1,4 @@
+import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import {
   Box,
   Divider,
@@ -8,42 +9,48 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { primary } from "../../app/index";
+import ResumeBtn from "../button/ResumeBtn";
 import { navItems } from "./constant";
+import HashLink from "./HashLink";
 import HireMeBtn from "./HireMeBtn";
 
 const DrawerAppBar = ({ handleDrawerToggle, open }) => {
   return (
     <Drawer
-      variant="temporary"
       open={open}
       onClose={handleDrawerToggle}
       ModalProps={{
-        keepMounted: true, // Better open performance on mobile.
+        keepMounted: true,
       }}
       sx={{
         display: { sm: "block", md: "none" },
-        "& .MuiDrawer-paper": { boxSizing: "border-box", width: 200 },
-        color: (theme) => theme.palette.primary.main,
+        "& .MuiDrawer-paper": {
+          boxSizing: "border-box",
+          width: { xs: "60%", sm: "40%" },
+          bgcolor: primary,
+        },
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Typography
-          variant="h3"
-          sx={{ my: 2, color: (theme) => theme.palette.primary.main }}
-        >
+        <Typography variant="h3" sx={{ my: 2 }}>
           DKS
         </Typography>
-        <Divider />
-        <List>
+        <Divider style={{ color: "red" }} />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            mt: 2,
+            mb: 4,
+          }}
+        >
           {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
+            <HashLink item={item} />
           ))}
-        </List>
-        <HireMeBtn />
+        </Box>
+        <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn>
       </Box>
     </Drawer>
   );

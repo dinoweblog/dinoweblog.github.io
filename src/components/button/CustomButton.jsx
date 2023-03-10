@@ -2,7 +2,15 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { secondary } from "../../app/uiCore/themeColor";
 
-const CustomButton = ({ style, icon, children, onClick, to }) => {
+const CustomButton = ({
+  style,
+  endIcon,
+  children,
+  startIcon,
+  onClick,
+  to,
+  href,
+}) => {
   const navigate = useNavigate();
 
   return (
@@ -25,7 +33,10 @@ const CustomButton = ({ style, icon, children, onClick, to }) => {
         maxWidth: "240px",
         ...style,
       }}
-      endIcon={icon}
+      endIcon={endIcon}
+      startIcon={startIcon}
+      href={href}
+      target="_blank"
     >
       {children}
     </Button>

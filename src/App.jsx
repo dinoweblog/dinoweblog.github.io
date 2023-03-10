@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <ThemeProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <AppRoutes />
         </BrowserRouter>
       </ThemeProvider>
