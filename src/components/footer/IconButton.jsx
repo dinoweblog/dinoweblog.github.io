@@ -8,6 +8,11 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
       sx={{
         display: "flex",
         alignItems: "center",
+        justifyContent: {
+          xs: "center",
+          sm: "center",
+          md: "space-between",
+        },
         gap: 3,
         textDecoration: "none",
         "&:hover": {

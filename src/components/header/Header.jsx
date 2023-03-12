@@ -24,7 +24,7 @@ const Header = () => {
         component="nav"
         sx={{
           bgcolor: scrollDirection > 110 ? primary : "transparent",
-          height: "100px",
+          height: { xs: "75px", sm: "100px" },
           boxShadow: "0",
           transition: "all .5s ease",
           "&.MuiPaper-root":
@@ -37,6 +37,7 @@ const Header = () => {
                   position: "absolute",
                   top: scrollDirection < 4 ? 0 : -180,
                 },
+          p: 0,
         }}
       >
         <Toolbar
@@ -45,6 +46,7 @@ const Header = () => {
             m: "auto",
             display: "flex",
             justifyContent: "space-between",
+            p: 0,
           }}
         >
           <Logo />

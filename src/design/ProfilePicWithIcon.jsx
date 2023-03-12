@@ -9,7 +9,7 @@ const ProfilePicWithIcon = () => {
         position: "relative",
         maxWidth: { xs: "300px", sm: "450px", md: "800px" },
         m: { xs: "auto", sm: "auto", md: 0 },
-        right: { xs: 0, sm: 0, md: -100 },
+        right: { xs: 0, sm: 0, md: -50, lg: -100 },
         mt: { xs: 0, sm: 0, lg: -4 },
       }}
     >
@@ -31,7 +31,7 @@ const ProfilePicWithIcon = () => {
           width: { xs: "90%", sm: "75%", md: "85%" },
           position: "relative",
           zIndex: 10,
-          mt: { xs: -2, sm: -2, md: -8 },
+          mt: { xs: -2, sm: -2, md: 0, lg: -8 },
         }}
       />
 
@@ -39,7 +39,7 @@ const ProfilePicWithIcon = () => {
         sx={{
           position: "absolute",
           top: 40,
-          right: { xs: 0, sm: 0, md: -30 },
+          right: { xs: 0, sm: 0, md: 0, lg: -30 },
           width: "100%",
         }}
       >

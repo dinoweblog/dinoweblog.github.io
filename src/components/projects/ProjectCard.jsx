@@ -82,7 +82,7 @@ const ProjectCard = ({ data, sx }) => {
             flexWrap: "wrap",
             alignItems: "center",
             mt: 3,
-            gap: { xs: 2, sm: 4 },
+            gap: 1,
           }}
         >
           <Typography variant="body2">Tech Stack :</Typography>
@@ -98,19 +98,22 @@ const ProjectCard = ({ data, sx }) => {
             mt: 3,
           }}
         >
-          <CustomButton
-            style={{
-              "&:hover": {
-                bgcolor: "#fff",
-                color: primary,
-              },
-              height: "45px",
-              bgcolor: secondary,
-            }}
-            icon={<IoLogoGithub />}
-          >
-            Code
-          </CustomButton>
+          {data.githubUrl ? (
+            <CustomButton
+              style={{
+                "&:hover": {
+                  bgcolor: "#fff",
+                  color: primary,
+                },
+                height: "45px",
+                bgcolor: secondary,
+              }}
+              startIcon={<IoLogoGithub />}
+              href={data.githubUrl}
+            >
+              Code
+            </CustomButton>
+          ) : null}
 
           <CustomButton
             style={{
@@ -121,7 +124,8 @@ const ProjectCard = ({ data, sx }) => {
               height: "45px",
               bgcolor: secondary,
             }}
-            icon={<TbExternalLink />}
+            endIcon={<TbExternalLink />}
+            href={data.url}
           >
             View
           </CustomButton>

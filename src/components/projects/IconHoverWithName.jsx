@@ -1,44 +1,28 @@
-import { Box, Typography } from "@mui/material";
-import { useState } from "react";
-import { IconContext } from "react-icons";
+import { IconButton } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: "#fff",
+  },
+}));
 
 const IconHoverWithName = ({ icon }) => {
-  const [show, setShow] = useState(null);
-
-  const handleOver = () => {
-    setShow(icon.name);
-  };
-
-  const handleLeave = () => {
-    setShow(null);
-  };
-
   return (
-    <IconContext.Provider value={{ size: 35 }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          position: "relative",
-          color: (theme) => theme.palette.secondary.main,
-        }}
+    <BootstrapTooltip title={icon.name}>
+      <IconButton
+        sx={{ color: (theme) => theme.palette.secondary.main, fontSize: 31 }}
       >
-        <Typography onMouseOver={handleOver} onMouseLeave={handleLeave}>
-          {icon.logo}
-        </Typography>
-        {show === icon.name ? (
-          <Typography
-            variant="body2"
-            sx={{
-              position: "absolute",
-              bottom: -15,
-            }}
-          >
-            {icon.name}
-          </Typography>
-        ) : null}
-      </Box>
-    </IconContext.Provider>
+        {icon.logo}
+      </IconButton>
+    </BootstrapTooltip>
   );
 };
 

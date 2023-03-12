@@ -100,7 +100,9 @@ const Footer = () => {
               dinoweblog@gmail.com
             </IconButton>
           </Box>
-          <SocialIconRow />
+          <Box>
+            <SocialIconRow />
+          </Box>
         </Box>
       </Box>
       <Divider color="#3b3d49" />

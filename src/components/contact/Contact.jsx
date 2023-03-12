@@ -23,26 +23,26 @@ const Contact = () => {
         <ContactDetails
           sx={{ display: { xs: "none", sm: "none", md: "block" } }}
         />
-        <Box flex={2} sx={{ p: { xs: 0, sm: 0, md: 10 } }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: (theme) => theme.palette.secondary.main,
-              letterSpacing: 2,
-              display: { xs: "none", sm: "none", md: "flex" },
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <RxPause /> {`Get In Touch`}
-          </Typography>
-          <Typography
-            variant="h1"
-            mt={4}
-            sx={{ display: { xs: "none", sm: "none", md: "block" } }}
-          >
-            Send Me A Message
-          </Typography>
+        <Box
+          flex={2}
+          sx={{ pt: { xs: 0, sm: 0, md: 10 }, pl: { xs: 0, sm: 0, md: 10 } }}
+        >
+          <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
+            <Typography
+              variant="body1"
+              sx={{
+                color: (theme) => theme.palette.secondary.main,
+                letterSpacing: 2,
+                alignItems: "center",
+                gap: 2,
+              }}
+            >
+              <RxPause /> {`Get In Touch`}
+            </Typography>
+            <Typography variant="h1" mt={4}>
+              Send Me A Message
+            </Typography>
+          </Box>
 
           <ContactForm />
         </Box>

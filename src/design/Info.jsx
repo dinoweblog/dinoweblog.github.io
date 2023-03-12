@@ -1,5 +1,6 @@
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
+import { primary } from "../app/index";
 import ResumeBtn from "../components/button/ResumeBtn";
 
 const Info = () => {
@@ -47,7 +48,12 @@ const Info = () => {
         Full Stack Web Developer & Freelancer
       </Typography>
 
-      <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Get Resume</ResumeBtn>
+      <ResumeBtn
+        endIcon={<KeyboardDoubleArrowRight />}
+        style={{ bgcolor: primary }}
+      >
+        Get Resume
+      </ResumeBtn>
     </Box>
   );
 };
