@@ -52,7 +52,7 @@ const Header = () => {
             color="inherit"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" }, color: "#fff" }}
+            sx={{ display: { md: "none" }, color: "#fff" }}
           >
             <Menu />
           </IconButton>

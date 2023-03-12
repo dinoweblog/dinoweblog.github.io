@@ -49,7 +49,10 @@ const AboutMeInfo = ({ isShow }) => {
       <Box flex={5}>
         <Typography
           variant="h1"
-          sx={{ fontSize: "4rem !important", lineHeight: 1.5 }}
+          sx={{
+            fontSize: { xs: "3rem", sm: "4rem" },
+            lineHeight: 1.5,
+          }}
         >
           I'm Dinesh Sharma
         </Typography>
@@ -57,7 +60,7 @@ const AboutMeInfo = ({ isShow }) => {
           variant="h1"
           sx={{
             color: (theme) => theme.palette.secondary.main,
-            fontSize: "2.5rem !important",
+            fontSize: { xs: "2rem", sm: "2.5rem" },
             lineHeight: 1.5,
           }}
         >

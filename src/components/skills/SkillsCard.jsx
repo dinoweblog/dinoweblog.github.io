@@ -6,19 +6,9 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { KeyboardDoubleArrowRight, Terminal } from "@mui/icons-material";
+import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { primary } from "../../app/uiCore/themeColor";
 import CircleBorder from "../../design/CircleBorder2";
-
-const d = [
-  "React",
-  "Redux",
-  "JavaScript",
-  "TypeScript",
-  "Material-UI",
-  "HTML/CSS",
-  "Git",
-];
 
 const SkillsCard = ({ data }) => {
   return (

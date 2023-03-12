@@ -109,7 +109,7 @@ export const ProjectSlider = () => {
           display: "flex",
           gap: 4,
           position: "absolute",
-          top: { xs: 250, sm: 250, md: 150 },
+          top: { xs: 280, sm: 250, md: 150 },
           right: 0,
         }}
       >

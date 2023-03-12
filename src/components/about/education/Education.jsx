@@ -1,5 +1,4 @@
-import { Box, Typography } from "@mui/material";
-import { primary } from "../../../app/index";
+import { Box } from "@mui/material";
 import { education } from "../constants";
 import ContentCard from "./ContentCard";
 

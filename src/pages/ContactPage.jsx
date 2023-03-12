@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { secondary } from "../app/index";
-import { Contact, ProjectCard } from "../components";
+import { Contact } from "../components";
 import PageWrapper from "./wrapper/PageWrapper";
 
 const ContactPage = () => {

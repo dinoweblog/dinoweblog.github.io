@@ -8,7 +8,7 @@ const Info = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: 8,
+        gap: { xs: 5, sm: 8 },
         mt: { xs: 10, sm: 10, md: 0 },
         ml: { xs: "5%", sm: "5%", md: 0 },
       }}

@@ -28,7 +28,7 @@ const ProfilePicWithIcon = () => {
         src={"./assets/Profile.png"}
         alt="profile"
         sx={{
-          width: { xs: "85%", sm: "75%", md: "85%" },
+          width: { xs: "90%", sm: "75%", md: "85%" },
           position: "relative",
           zIndex: 10,
           mt: { xs: -2, sm: -2, md: -8 },

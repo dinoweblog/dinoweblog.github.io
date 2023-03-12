@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { primary, RxPause, secondary } from "../../app/index";
 import CircleBorder from "../../design/CircleBorder2";
 import TextButton from "./TextButton";

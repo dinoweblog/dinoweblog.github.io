@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ContactDetails from "./ContactDetails";
-import { primary, RxPause, secondary } from "../../app/index";
+import { RxPause, secondary } from "../../app/index";
 import Wrapper from "../wrapper/Wrapper";
 import ContactForm from "./ContactForm";
 

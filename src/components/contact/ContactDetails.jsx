@@ -10,7 +10,7 @@ const ContactDetails = ({ sx }) => {
       <Box
         sx={{
           bgcolor: primary,
-          p: 8,
+          p: { xs: 3, sm: 8 },
           display: "flex",
           flexDirection: "column",
           gap: 5,
@@ -28,7 +28,7 @@ const ContactDetails = ({ sx }) => {
       <Box
         sx={{
           bgcolor: primary,
-          p: 8,
+          p: { xs: 3, sm: 8 },
           mt: 4,
         }}
       >
@@ -42,7 +42,7 @@ const ContactDetails = ({ sx }) => {
       <Box
         sx={{
           bgcolor: primary,
-          p: 8,
+          p: { xs: 3, sm: 8 },
           mt: 4,
         }}
       >

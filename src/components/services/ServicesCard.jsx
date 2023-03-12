@@ -5,8 +5,8 @@ const ServicesCard = ({ icon, text }) => {
   return (
     <Box
       sx={{
-        pt: "70px",
-        pb: "70px",
+        pt: { xs: "40px", sm: "70px" },
+        pb: { xs: "40px", sm: "70px" },
         border: "1px solid",
         borderColor: "#3b3d49",
         bgcolor: secondary,

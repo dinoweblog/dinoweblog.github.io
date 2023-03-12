@@ -43,7 +43,10 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
         {!isIcon ? children : null}
       </CustomButton>
       {children && isIcon ? (
-        <Typography variant="h2" sx={{ fontWeight: 400 }}>
+        <Typography
+          variant="h2"
+          sx={{ fontWeight: 400, fontSize: { xs: "1.3rem", sm: "2rem" } }}
+        >
           {children}
         </Typography>
       ) : null}

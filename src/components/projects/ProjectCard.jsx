@@ -46,7 +46,7 @@ const ProjectCard = ({ data, sx }) => {
 
         <Box
           sx={{
-            p: { xs: 6, sm: 10, md: 8, lg: 14 },
+            p: { xs: 4, sm: 8, md: 8, lg: 13 },
             zIndex: 20,
             width: "100%",
             position: "absolute",

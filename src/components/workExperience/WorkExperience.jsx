@@ -1,14 +1,6 @@
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import { FaRegHandPointRight } from "../../app/index";
+import { Box } from "@mui/material";
 import { experienceData } from ".";
-import { primary, secondary } from "../../app/uiCore/themeColor";
+import { primary } from "../../app/uiCore/themeColor";
 import Wrapper from "../wrapper/Wrapper";
 import ExperienceCard from "./ExperienceCard";
 
