@@ -1,7 +1,11 @@
-import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Logo = () => {
-  return <Typography variant="h2">DKS</Typography>;
+  return (
+    <Box sx={{ maxWidth: 170 }}>
+      <Box component="img" src="./logo.png" sx={{ width: "100%" }} />
+    </Box>
+  );
 };
 
 export default Logo;

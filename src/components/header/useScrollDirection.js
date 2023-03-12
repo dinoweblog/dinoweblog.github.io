@@ -4,15 +4,13 @@ export const useScrollDirection = () => {
   const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
       setScrollDirection(scrollY);
     };
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    window.addEventListener("scroll", updateScrollDirection);
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection); // clean up
+      window.removeEventListener("scroll", updateScrollDirection);
     };
   }, [scrollDirection]);
 

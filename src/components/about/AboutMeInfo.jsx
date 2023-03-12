@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import {
   MdKeyboardDoubleArrowRight,
   primary,
+  RESUME_FILE,
   secondary,
 } from "../../app/index";
 import { CustomButton } from "../button";
@@ -41,7 +42,9 @@ const AboutMeInfo = ({ isShow }) => {
             pt: 1,
           }}
         />
-        <ResumeBtn endIcon={<Download />}>Resume</ResumeBtn>
+        <ResumeBtn endIcon={<Download />} href={RESUME_FILE}>
+          Resume
+        </ResumeBtn>
       </Box>
       <Box flex={5}>
         <Typography
@@ -58,7 +61,7 @@ const AboutMeInfo = ({ isShow }) => {
             lineHeight: 1.5,
           }}
         >
-          Full Stack Web Developer & A Freelancer
+          Full Stack Web Developer & Freelancer
         </Typography>
         <Typography
           variant="body2"

@@ -1,6 +1,6 @@
 import { TbExternalLink } from "react-icons/tb";
 import { TbBrandCss3, TbBrandHtml5, TbBrandJavascript } from "react-icons/tb";
-import { IoLogoNodejs, IoLogoGithub } from "react-icons/io";
+import { IoLogoNodejs, IoLogoGithub, IoIosSend } from "react-icons/io";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaRegHandPointRight } from "react-icons/fa";
 import { BsCodeSlash, BsTelephoneFill } from "react-icons/bs";
@@ -9,6 +9,8 @@ import {
   MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowLeft,
   MdOutlineMiscellaneousServices,
+  MdOutlineMailOutline,
+  MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { ImFilePdf } from "react-icons/im";
 import { RxPause } from "react-icons/rx";
@@ -47,4 +49,7 @@ export {
   MdKeyboardDoubleArrowLeft,
   MdOutlineMiscellaneousServices,
   ImFilePdf,
+  IoIosSend,
+  MdOutlineMailOutline,
+  MdOutlineKeyboardArrowUp,
 };

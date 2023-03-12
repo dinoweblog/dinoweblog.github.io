@@ -30,7 +30,7 @@ const socialMedia = ({ style, sx }) => {
             },
             ...style,
           }}
-          href="#"
+          href={i.url}
           target="_blank"
         >
           {i.icon}

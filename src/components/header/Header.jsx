@@ -1,19 +1,16 @@
-import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import { KeyboardDoubleArrowRight, Menu } from "@mui/icons-material";
 import DrawerAppBar from "./DrawerAppBar";
 import { useState } from "react";
 import { navItems } from "./constant";
 import Logo from "./Logo";
-import { useLocation, useNavigate } from "react-router-dom";
 import ResumeBtn from "../button/ResumeBtn";
 import HashLink from "./HashLink";
 import { useScrollDirection } from "./useScrollDirection";
-import "./style.css";
 import { primary } from "../../app/index";
 
 const Header = () => {
-  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const scrollDirection = useScrollDirection();
 
@@ -38,7 +35,7 @@ const Header = () => {
                 }
               : {
                   position: "absolute",
-                  top: scrollDirection === 0 ? 0 : -180,
+                  top: scrollDirection < 4 ? 0 : -180,
                 },
         }}
       >
@@ -62,10 +59,13 @@ const Header = () => {
           <Box
             sx={{
               display: { xs: "none", sm: "none", md: "flex", gap: 30 },
+              "& a:hover": {
+                color: "#fff !important",
+              },
             }}
           >
             {navItems.map((item) => (
-              <HashLink item={item} />
+              <HashLink key={item} item={item} />
             ))}
           </Box>
           <Box sx={{ display: { sm: "none", xs: "none", md: "flex" } }}>

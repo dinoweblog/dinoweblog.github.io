@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Footer, Header } from "./components";
+import { Footer, GoToTopBtn, Header } from "./components";
 
 const AppLayout = () => {
   return (
@@ -10,6 +10,7 @@ const AppLayout = () => {
         <Outlet />
       </Box>
       <Footer />
+      <GoToTopBtn />
     </Box>
   );
 };

@@ -2,19 +2,29 @@ import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 const HashLink = ({ item }) => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
   const isActive = (isHash) => hash === isHash;
   return (
     <NavHashLink
+      className={item.toLowerCase()}
       smooth
       style={
-        isActive(item === "Home" ? "" : `#${item.toLowerCase()}`)
+        isActive(
+          item === "Home" && pathname !== "/projects"
+            ? ""
+            : `#${item.toLowerCase()}`
+        )
           ? {
               color: "#fff",
             }
-          : { color: "#858792" }
+          : {
+              color: "#858792",
+              "& a": {
+                color: "#fff",
+              },
+            }
       }
-      to={item === "Home" ? "#" : `#${item.toLowerCase()}`}
+      to={item === "Home" ? "/#" : `/#${item.toLowerCase()}`}
     >
       {item}
     </NavHashLink>

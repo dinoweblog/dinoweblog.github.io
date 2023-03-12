@@ -5,14 +5,16 @@ import Wrapper from "../wrapper/Wrapper";
 import AboutMeInfo from "./AboutMeInfo";
 import Education from "./education/Education";
 import Experience from "./experience/Experience";
+import { CSSTransition } from "react-transition-group";
 
 const About = () => {
   const [index, setIndex] = useState(1);
   const handleIndex = (ind) => {
     setIndex(ind);
   };
-  return (
-    <Box>
+
+  const item = (
+    <Box className="item" sx={{ transition: "all 400ms" }}>
       <Wrapper
         page="About Me"
         title="About Me"
@@ -70,6 +72,16 @@ const About = () => {
         </Box>
       </Box>
     </Box>
+  );
+
+  return (
+    <CSSTransition
+      transitionName="item"
+      transitionEnterTimeout={500}
+      transitionLeaveTimeout={500}
+    >
+      {item}
+    </CSSTransition>
   );
 };
 

@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import ContactDetails from "./ContactDetails";
 import { primary, RxPause, secondary } from "../../app/index";
 import Wrapper from "../wrapper/Wrapper";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -28,16 +29,22 @@ const Contact = () => {
             sx={{
               color: (theme) => theme.palette.secondary.main,
               letterSpacing: 2,
-              display: "flex",
+              display: { xs: "none", sm: "none", md: "flex" },
               alignItems: "center",
               gap: 2,
             }}
           >
             <RxPause /> {`Get In Touch`}
           </Typography>
-          <Typography variant="h1" mt={4}>
-            If you have any porject or need help. Contact me
+          <Typography
+            variant="h1"
+            mt={4}
+            sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+          >
+            Send Me A Message
           </Typography>
+
+          <ContactForm />
         </Box>
         <ContactDetails
           sx={{ display: { xs: "block", sm: "block", md: "none" } }}

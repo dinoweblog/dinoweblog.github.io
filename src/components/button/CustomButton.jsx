@@ -10,13 +10,15 @@ const CustomButton = ({
   onClick,
   to,
   href,
+  type,
+  disabled,
 }) => {
   const navigate = useNavigate();
 
   return (
     <Button
       onClick={() => {
-        to ? navigate(to) : onClick();
+        to ? navigate(to) : onClick && onClick();
       }}
       sx={{
         border: "1px solid #3b3d49",
@@ -36,7 +38,10 @@ const CustomButton = ({
       endIcon={endIcon}
       startIcon={startIcon}
       href={href}
+      type={type}
       target="_blank"
+      disabled={disabled}
+      download
     >
       {children}
     </Button>

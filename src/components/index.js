@@ -10,6 +10,7 @@ import SkillsCard from "./skills/SkillsCard";
 import { About, AboutMeInfo, Education, Experience } from "./about";
 import Contact from "./contact/Contact";
 import SocialIconRow from "./footer/SocialIconRow";
+import GoToTopBtn from "./button/GoToTopBtn";
 
 export {
   Home,
@@ -27,4 +28,5 @@ export {
   SkillsCard,
   Contact,
   SocialIconRow,
+  GoToTopBtn,
 };

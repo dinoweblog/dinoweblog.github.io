@@ -1,5 +1,5 @@
-import { Box, Button, IconButton, Typography } from "@mui/material";
-import { primary, secondary, ImFilePdf } from "../../app/index";
+import { Box, Typography } from "@mui/material";
+import { primary, secondary, ImFilePdf, RESUME_FILE } from "../../app/index";
 import ResumeBtn from "../button/ResumeBtn";
 import SocialIconRow from "../footer/SocialIconRow";
 import { contactDetails } from "./constant";
@@ -53,6 +53,7 @@ const ContactDetails = ({ sx }) => {
         <ResumeBtn
           startIcon={<ImFilePdf />}
           style={{ height: 30, p: 3, borderRadius: 0 }}
+          href={RESUME_FILE}
         >
           Download Resume
         </ResumeBtn>

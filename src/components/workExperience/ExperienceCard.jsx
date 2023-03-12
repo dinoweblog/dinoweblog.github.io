@@ -15,6 +15,9 @@ const ExperienceCard = ({ data }) => {
       <Typography variant="h3">{data.comapny}</Typography>
       <Typography variant="body2">{data.date}</Typography>
       <Typography variant="body2">{data.description}</Typography>
+      <Typography variant="body2" sx={{ mt: 2 }}>
+        My Responsibility:
+      </Typography>
       <List>
         {data.responsibility.map((text) => (
           <ListItem disablePadding>

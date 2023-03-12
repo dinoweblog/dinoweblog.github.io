@@ -1,7 +1,8 @@
+import { RESUME_LINK } from "../../app/apis";
 import { secondary } from "../../app/index";
 import CustomButton from "./CustomButton";
 
-const ResumeBtn = ({ href, style, endIcon, startIcon, children }) => {
+const ResumeBtn = ({ style, endIcon, startIcon, children, href }) => {
   return (
     <CustomButton
       style={{
@@ -11,11 +12,12 @@ const ResumeBtn = ({ href, style, endIcon, startIcon, children }) => {
         pl: 5,
         pr: 5,
         height: "60px",
+        zIndex: 100,
         ...style,
       }}
       endIcon={endIcon}
       startIcon={startIcon}
-      href={href}
+      href={href ? href : RESUME_LINK}
     >
       {children}
     </CustomButton>
