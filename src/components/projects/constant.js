@@ -102,6 +102,15 @@ export const projectData = [
     url: "https://petcare.vercel.app/",
   },
   {
+    title: "Unacademy Clone Website",
+    image: "./assets/projects/unacademy.png",
+    description:
+      "Unacademy is a learning platform that provides content for major competitive examinations. A collaborative project built by a team of 5 executed in 6 days.",
+    techStack: [React, Redux, Javascript, CSS],
+    githubUrl: "https://github.com/danish4git/UNACADEMY-CLONE",
+    url: "https://unacademy-clone-kappa.vercel.app/",
+  },
+  {
     title: "Nykaa Fashion Clone Website",
     image: "./assets/projects/nykaafashion.png",
     description:
@@ -118,15 +127,6 @@ export const projectData = [
     techStack: [Nodejs, Javascript, HTML, CSS],
     githubUrl: "https://github.com/dinoweblog/FW13-T48-BebodywiseClone-Project",
     url: "https://bebodywiseclone.netlify.app/",
-  },
-  {
-    title: "Unacademy Clone Website",
-    image: "./assets/projects/unacademy.png",
-    description:
-      "Unacademy is a learning platform that provides content for major competitive examinations. A collaborative project built by a team of 5 executed in 6 days.",
-    techStack: [React, Redux, Javascript, CSS],
-    githubUrl: "https://github.com/danish4git/UNACADEMY-CLONE",
-    url: "https://unacademy-clone-kappa.vercel.app/",
   },
 
   {
