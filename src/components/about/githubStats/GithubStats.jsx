@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import GitHubCalendar from "react-github-calendar";
-import { RxPause, secondary } from "../../../app/index";
+import { RxPause } from "../../../app/index";
 
 const GithubStats = () => {
   return (
