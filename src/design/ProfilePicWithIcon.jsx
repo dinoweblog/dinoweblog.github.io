@@ -31,7 +31,8 @@ const ProfilePicWithIcon = () => {
           width: { xs: "90%", sm: "75%", md: "85%" },
           position: "relative",
           zIndex: 10,
-          mt: { xs: -2, sm: -2, md: 0, lg: -8 },
+          mt: { xs: -3, sm: -2, md: 0, lg: -8 },
+          ml: { xs: -2, sm: -2 },
         }}
       />
 

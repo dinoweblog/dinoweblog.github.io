@@ -62,26 +62,26 @@ const Express = {
 };
 
 export const projectData = [
-  {
-    title: "Good Game Nation Project",
-    image: "./assets/projects/ggn.png",
-    description:
-      "I worked as a MERN stack developer at GGN project. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
-    techStack: [
-      React,
-      Redux,
-      Typescript,
-      Nodejs,
-      Express,
-      Mongodb,
-      Jest,
-      Apollographql,
-      Mui,
-      CSS,
-    ],
-    githubUrl: "",
-    url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
-  },
+  // {
+  //   title: "Good Game Nation Project",
+  //   image: "./assets/projects/ggn.png",
+  //   description:
+  //     "I worked as a MERN stack developer at GGN project. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
+  //   techStack: [
+  //     React,
+  //     Redux,
+  //     Typescript,
+  //     Nodejs,
+  //     Express,
+  //     Mongodb,
+  //     Jest,
+  //     Apollographql,
+  //     Mui,
+  //     CSS,
+  //   ],
+  //   githubUrl: "",
+  //   url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
+  // },
   {
     title: "e-Mart Ecommerce Website",
     image: "./assets/projects/e-mart.png",

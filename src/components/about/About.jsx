@@ -5,7 +5,7 @@ import Wrapper from "../wrapper/Wrapper";
 import AboutMeInfo from "./AboutMeInfo";
 import Education from "./education/Education";
 import Experience from "./experience/Experience";
-import { CSSTransition } from "react-transition-group";
+import GithubStats from "./githubStats/GithubStats";
 
 const About = () => {
   const [index, setIndex] = useState(1);
@@ -13,7 +13,7 @@ const About = () => {
     setIndex(ind);
   };
 
-  const item = (
+  return (
     <Box className="item" sx={{ transition: "all 400ms" }}>
       <Wrapper
         page="About Me"
@@ -70,18 +70,10 @@ const About = () => {
           </Box>
           {index === 1 ? <Education /> : <Experience />}
         </Box>
+
+        <GithubStats />
       </Box>
     </Box>
-  );
-
-  return (
-    <CSSTransition
-      transitionName="item"
-      transitionEnterTimeout={500}
-      transitionLeaveTimeout={500}
-    >
-      {item}
-    </CSSTransition>
   );
 };
 
