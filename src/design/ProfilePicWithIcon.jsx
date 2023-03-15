@@ -7,9 +7,8 @@ const ProfilePicWithIcon = () => {
     <Box
       sx={{
         position: "relative",
-        maxWidth: { xs: "300px", sm: "450px", md: "800px" },
+        maxWidth: { xs: "300px", sm: "450px", md: "100%", lg: "77%" },
         m: { xs: "auto", sm: "auto", md: 0 },
-        right: { xs: 0, sm: 0, md: -50, lg: -100 },
         mt: { xs: 0, sm: 0, lg: -4 },
       }}
     >
@@ -40,7 +39,6 @@ const ProfilePicWithIcon = () => {
         sx={{
           position: "absolute",
           top: 40,
-          right: { xs: 0, sm: 0, md: 0, lg: -30 },
           width: "100%",
         }}
       >

@@ -9,7 +9,7 @@ const SocialMediaWithCircle = () => {
         position: "relative",
         maxWidth: { xs: "300px", sm: "450px", md: "650px" },
         height: { xs: "300px", sm: "450px", md: "650px" },
-        right: { xs: 0, sm: 0, md: -30 },
+        right: { xs: 0, sm: 0, md: -50 },
       }}
     >
       <CircleBorder />

@@ -18,17 +18,45 @@ const Home = () => {
     >
       <Box
         sx={{
-          width: "80%",
+          width: "100%",
           m: "auto",
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
           mt: { xs: 4, sm: 4, md: 10 },
+          boxSizing: "border-box",
         }}
       >
-        <Box flex={1} sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
+        <Box
+          sx={{
+            flex: {
+              md: 1,
+              lg: 1,
+            },
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "block",
+            },
+            pl: { md: "10%" },
+          }}
+        >
           <Info />
         </Box>
-        <ProfilePicWithIcon />
+        <Box
+          sx={{
+            flex: {
+              md: 2,
+              lg: 1.3,
+            },
+            mr: 1,
+            pr: { md: "5%" },
+            display: "flex",
+            justifyContent: "end",
+          }}
+        >
+          <ProfilePicWithIcon />
+        </Box>
+
         <Box
           flex={1}
           sx={{ display: { xs: "block", sm: "block", md: "none" } }}
