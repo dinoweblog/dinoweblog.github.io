@@ -12,6 +12,7 @@ const Info = () => {
         gap: { xs: 5, sm: 8 },
         mt: { xs: 10, sm: 10, md: 0 },
         ml: { xs: "5%", sm: "5%", md: 0 },
+        p: { xs: 1, sm: 0, md: 0 },
       }}
     >
       <Box>
@@ -32,7 +33,7 @@ const Info = () => {
           variant="h1"
           sx={{
             fontSize: {
-              xs: "3rem !important",
+              xs: "2.5rem !important",
               sm: "4rem !important",
               md: "5rem !important",
             },

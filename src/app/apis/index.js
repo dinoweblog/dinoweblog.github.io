@@ -1,5 +1,5 @@
 const RESUME_LINK =
-  "https://drive.google.com/file/d/1jMKhurjTHysUZJv_0fv4v3uwdlVtTViJ/view";
+  "https://drive.google.com/file/d/1WZ_8ayoUzd0LQQLHmO-VvHEp2i98Z_eq/view";
 const RESUME_FILE = "./assets/fw13_348-Dinesh-Sharma-Resume.pdf";
 
 export { RESUME_LINK, RESUME_FILE };
