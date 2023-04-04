@@ -39,7 +39,6 @@ export const skills = [
     skills: [
       "AWS S3 Storage",
       "AWS Cognito",
-      "AWS EC2",
       "AWS Amplify",
       "Firebase Storage",
       "Firestore Database",

@@ -12,7 +12,7 @@ export const services = [
     title: "Development",
   },
   {
-    type: "Web",
+    type: "Services",
     title: "AWS",
   },
 ];

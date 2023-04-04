@@ -32,6 +32,7 @@ const GithubStats = () => {
         component="img"
         src={`https://github-stats-alpha.vercel.app/api?username=dinoweblog&cc=252734&tc=fff&ic=fff&bc=2a2c39`}
       />
+
       <GitHubCalendar
         username="dinoweblog"
         style={{ color: "#fff", width: "90%", svg: { width: "90%" } }}

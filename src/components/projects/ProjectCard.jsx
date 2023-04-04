@@ -29,7 +29,7 @@ const ProjectCard = ({ data, sx }) => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            width: "80%",
+            width: { xs: "95%", md: "85%", lg: "80%" },
             zIndex: 1,
           }}
         />

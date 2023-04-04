@@ -89,7 +89,7 @@ export const projectData = [
 
   {
     title: "Pet Boarding Website",
-    image: "./assets/projects/petcare.png",
+    image: "./assets/projects/petcare.jpg",
     description:
       "This is a solo project. It is a react and redux pet boarding booking website. A full-stack website developed by 2 days. I added features like login and signup for both users [admin, costumer], filter & sort according to price, & End to End Flow, etc.",
     techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
