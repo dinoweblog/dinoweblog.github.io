@@ -1,5 +1,6 @@
 import { TbBrandCss3, TbBrandHtml5, TbBrandJavascript } from "react-icons/tb";
 import { IoLogoNodejs } from "react-icons/io";
+import { FaAws } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
 import {
   SiJest,
@@ -40,6 +41,10 @@ const Mui = {
   logo: <SiMui />,
   name: "Material-UI",
 };
+const AWS = {
+  logo: <FaAws />,
+  name: "AWS Services",
+};
 const React = {
   logo: <SiReact />,
   name: "React",
@@ -62,34 +67,24 @@ const Express = {
 };
 
 export const projectData = [
-  // {
-  //   title: "Good Game Nation Project",
-  //   image: "./assets/projects/ggn.png",
-  //   description:
-  //     "I worked as a MERN stack developer at GGN project. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
-  //   techStack: [
-  //     React,
-  //     Redux,
-  //     Typescript,
-  //     Nodejs,
-  //     Express,
-  //     Mongodb,
-  //     Jest,
-  //     Apollographql,
-  //     Mui,
-  //     CSS,
-  //   ],
-  //   githubUrl: "",
-  //   url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
-  // },
   {
-    title: "e-Mart Ecommerce Website",
-    image: "./assets/projects/e-mart.png",
+    title: "AapkaFashion E-commerce Website",
+    image: "./assets/projects/aapkafashions.jpg",
     description:
-      "This is a solo project, It is an e-commerce website that sells clothes products across websites . A full-stack solo project developed by 10 days. I added features like filter and sort products, cart manipulation, search functionality, order tracking, wishlist product & End to End Flow etc.",
-    techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
-    githubUrl: "https://github.com/dinoweblog/e-Mart-ecommerce-website-FB",
-    url: "https://e-mart-shop.vercel.app/",
+      "That is the e-commerce website, I worked as a freelancer and build the project individually in 30 days. I have worked on building UI features for authentication, home, products, product details, cart, wishlist, order, user account, address, and admin dashboard by using React, Redux, MUI",
+    techStack: [
+      React,
+      Redux,
+      Javascript,
+      Nodejs,
+      Express,
+      Mongodb,
+      AWS,
+      Mui,
+      CSS,
+    ],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://aapka-fashions.vercel.app/",
   },
 
   {
@@ -100,6 +95,37 @@ export const projectData = [
     techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
     githubUrl: "https://github.com/dinoweblog/Pet-Boarding-Site-FB",
     url: "https://petcare.vercel.app/",
+  },
+
+  {
+    title: "Good Game Nation Project",
+    image: "./assets/projects/ggn.png",
+    description:
+      "I worked as a MERN stack developer at GGN project. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
+    techStack: [
+      React,
+      Redux,
+      Typescript,
+      Nodejs,
+      Express,
+      Mongodb,
+      Jest,
+      Apollographql,
+      Mui,
+      CSS,
+    ],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
+  },
+
+  {
+    title: "e-Mart E-commerce Website",
+    image: "./assets/projects/e-mart.png",
+    description:
+      "This is a solo project, It is an e-commerce website that sells clothes products across websites . A full-stack solo project developed by 10 days. I added features like filter and sort products, cart manipulation, search functionality, order tracking, wishlist product & End to End Flow etc.",
+    techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
+    githubUrl: "https://github.com/dinoweblog/e-Mart-ecommerce-website-FB",
+    url: "https://e-mart-shop.vercel.app/",
   },
   {
     title: "Unacademy Clone Website",

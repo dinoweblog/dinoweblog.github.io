@@ -3,7 +3,7 @@ export const experienceData = [
     position: "Software Engineer",
     comapny: "Good Game Nation, Chennai",
     description: "Building the biggest community of gamers",
-    date: "Aug 2022 - Dec 2022",
+    date: "Aug 2022 - Feb 2023",
     responsibility: [
       "Involved in bootstrapping the platform from scratch.",
       "I have worked in building UI features for authentication, my schedules, my teams, tournaments and feeds by using React, Redux, MUI",
