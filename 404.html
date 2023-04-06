@@ -7,8 +7,15 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
-      const urlToRedirect = "https://dinoweblog.github.io/projects";
-      window.location.href = urlToRedirect;
+      if (window.sessionStorage.path) {
+        let path = window.sessionStorage.path;
+        window.history.pushState(null, null, path);
+        window.sessionStorage.removeItem("path");
+      } else {
+        let path = window.location.pathname;
+        window.sessionStorage.path = path;
+        window.location.href = "/";
+      }
     </script>
   </body>
 </html>
