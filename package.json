@@ -1,7 +1,7 @@
 {
   "name": "dinesh-sharma",
   "version": "0.1.0",
-  "homepage": "https://dinoweblog.github.io",
+  "homepage": "https://dinoweblog.github.io/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",

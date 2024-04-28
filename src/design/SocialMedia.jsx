@@ -7,6 +7,7 @@ const socialMedia = ({ style, sx }) => {
     <Box sx={sx}>
       {socialIcon.map((i) => (
         <Link
+          key={i.url}
           sx={{
             border: "1px solid #ffffff",
             minWidth: { xs: 35, sm: 45, md: 60 },

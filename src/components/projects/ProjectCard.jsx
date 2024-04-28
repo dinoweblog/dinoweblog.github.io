@@ -86,8 +86,8 @@ const ProjectCard = ({ data, sx }) => {
           }}
         >
           <Typography variant="body2">Tech Stack :</Typography>
-          {data.techStack?.map((icon) => (
-            <IconHoverWithName icon={icon} />
+          {data.techStack?.map((icon, index) => (
+            <IconHoverWithName key={index} icon={icon} />
           ))}
         </Box>
         <Box

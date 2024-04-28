@@ -7,6 +7,7 @@ import { useRef } from "react";
 import {
   MdKeyboardDoubleArrowLeft,
   MdKeyboardDoubleArrowRight,
+  primary,
 } from "../../app/index";
 import ProjectCard from "./ProjectCard";
 import { Box } from "@mui/material";
@@ -45,11 +46,15 @@ const SliderDiv = styled(Slider)`
     padding: 0 20% 0 0;
   }
 
+  .slick-dots {
+    margin-top: 20px;
+  }
+
   .slick-dots button:before {
-    color: #fff;
+    color: ${primary};
     opacity: 1;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .slick-list {
     padding: 0 20% 0 0 !important;
@@ -72,7 +77,7 @@ export const ProjectSlider = () => {
     speed: 500,
     lazyLoad: true,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrows: false,
     responsive: [
       {

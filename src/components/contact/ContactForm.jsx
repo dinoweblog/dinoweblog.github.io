@@ -48,7 +48,7 @@ const ContactForm = () => {
       );
   };
 
-  const isActive = !formData.name || !formData.email || !formData.message;
+  const isactive = !formData.name || !formData.email || !formData.message;
 
   return (
     <form
@@ -104,7 +104,7 @@ const ContactForm = () => {
             },
           }}
           type="submit"
-          disabled={isActive}
+          disabled={isactive}
         >
           Send
         </CustomButton>

@@ -3,13 +3,13 @@ import { NavHashLink } from "react-router-hash-link";
 
 const HashLink = ({ item }) => {
   const { hash, pathname } = useLocation();
-  const isActive = (isHash) => hash === isHash;
+  const isactive = (isHash) => hash === isHash;
   return (
     <NavHashLink
       className={item.toLowerCase()}
       smooth
       style={
-        isActive(
+        isactive(
           item === "Home" && pathname !== "/projects"
             ? ""
             : `#${item.toLowerCase()}`

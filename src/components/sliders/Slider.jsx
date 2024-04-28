@@ -33,12 +33,15 @@ const SliderDiv = styled(Slider)`
 
 export const ReactSlider = ({ children, sliderSettings }) => {
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 500,
     lazyLoad: true,
     slidesToScroll: 1,
     dots: true,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 767,

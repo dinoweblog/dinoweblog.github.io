@@ -70,7 +70,7 @@ const AboutMeInfo = ({ isShow }) => {
           variant="body2"
           sx={{ color: (theme) => theme.palette.secondary.main, mt: 4 }}
         >
-          An aspiring full stack developer with a specialization in MERN stack.
+          As an experienced full-stack developer specializing in the MERN stack.
           Keenly interested in problem-solving and making user-centric products,
           self-motivated and curious. Looking forward to honing my skills in a
           challenging work environment.

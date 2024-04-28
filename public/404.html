@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Full-Stack Web Developer & Freelancer" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <script>
+      if (window.sessionStorage.path) {
+        let path = window.sessionStorage.path;
+        window.history.pushState(null, null, path);
+        window.sessionStorage.removeItem("path");
+      } else {
+        let path = window.location.pathname;
+        window.sessionStorage.path = path;
+        window.location.href = "/";
+      }
+    </script>
+
+    <title>Dinesh Sharma | Portfolio</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
+</html>

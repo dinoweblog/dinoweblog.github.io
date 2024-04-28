@@ -20,7 +20,7 @@ const ProjectsPage = () => {
           }}
         >
           {projectData.map((project) => (
-            <ProjectCard sx={{ mb: 10 }} data={project} />
+            <ProjectCard key={project.title} sx={{ mb: 10 }} data={project} />
           ))}
         </Box>
       </Box>

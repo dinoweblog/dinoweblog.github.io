@@ -22,6 +22,19 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <script>
+      if (window.sessionStorage.path) {
+        let path = window.sessionStorage.path;
+        window.history.pushState(null, null, path);
+        window.sessionStorage.removeItem("path");
+      } else {
+        let path = window.location.pathname;
+        window.sessionStorage.path = path;
+        window.location.href = "/";
+      }
+    </script>
+
     <title>Dinesh Sharma | Portfolio</title>
   </head>
   <body>
