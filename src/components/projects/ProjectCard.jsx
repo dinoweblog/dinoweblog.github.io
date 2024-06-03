@@ -10,7 +10,13 @@ import {
 
 const ProjectCard = ({ data, sx }) => {
   return (
-    <Box sx={{ mb: { xs: 10, sm: 15, md: 0 }, ...sx }}>
+    <Box
+      sx={{
+        mb: { xs: 10, sm: 15, md: 0 },
+        pb: 2,
+        ...sx,
+      }}
+    >
       <Box
         sx={{
           width: "100%",

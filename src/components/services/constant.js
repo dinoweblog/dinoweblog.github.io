@@ -13,6 +13,6 @@ export const services = [
   },
   {
     type: "Services",
-    title: "AWS",
+    title: "AWS / Firebase",
   },
 ];

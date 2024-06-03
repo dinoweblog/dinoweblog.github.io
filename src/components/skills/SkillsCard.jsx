@@ -15,16 +15,16 @@ const SkillsCard = ({ data }) => {
     <Box
       sx={{
         bgcolor: primary,
-        p: "3rem",
+        p: { xs: "1.5rem", sm: "2rem", md: "3rem" },
         overflow: "hidden",
         position: "relative",
-        height: { xs: 580, sm: 580, md: 620 },
+        height: { xs: 780, sm: 780, md: 780 },
       }}
     >
       {data.icon}
       <Typography
         variant="h3"
-        mt={3}
+        mt={1}
         sx={{ color: (theme) => theme.palette.secondary.main }}
       >
         {data.subTitle}
