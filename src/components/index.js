@@ -11,6 +11,7 @@ import { About, AboutMeInfo, Education, Experience } from "./about";
 import Contact from "./contact/Contact";
 import SocialIconRow from "./footer/SocialIconRow";
 import GoToTopBtn from "./button/GoToTopBtn";
+import AppBar from "./header/AppBar";
 
 export {
   Home,
@@ -29,4 +30,5 @@ export {
   Contact,
   SocialIconRow,
   GoToTopBtn,
+  AppBar,
 };

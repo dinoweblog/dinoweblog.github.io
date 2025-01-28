@@ -10,7 +10,6 @@ const Contact = () => {
       page="Contact Me"
       title="Contact Me"
       color={secondary}
-      style={{ width: "80%" }}
       id="contact"
     >
       <Box

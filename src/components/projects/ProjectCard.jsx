@@ -6,6 +6,7 @@ import {
   secondary,
   IoLogoGithub,
   TbExternalLink,
+  secondaryText,
 } from "../../app/index";
 
 const ProjectCard = ({ data, sx }) => {
@@ -108,11 +109,14 @@ const ProjectCard = ({ data, sx }) => {
             <CustomButton
               style={{
                 "&:hover": {
-                  bgcolor: "#fff",
-                  color: primary,
+                  bgcolor: secondaryText,
+                  borderColor: secondaryText,
                 },
                 height: "45px",
                 bgcolor: secondary,
+                borderColor: "#ffffff40",
+                color: "#fff",
+                borderRadius: 2,
               }}
               startIcon={<IoLogoGithub />}
               href={data.githubUrl}
@@ -124,11 +128,14 @@ const ProjectCard = ({ data, sx }) => {
           <CustomButton
             style={{
               "&:hover": {
-                bgcolor: "#fff",
-                color: primary,
+                bgcolor: secondaryText,
+                borderColor: secondaryText,
               },
               height: "45px",
               bgcolor: secondary,
+              borderColor: "#ffffff40",
+              color: "#fff",
+              borderRadius: 2,
             }}
             endIcon={<TbExternalLink />}
             href={data.url}

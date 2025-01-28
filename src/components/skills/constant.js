@@ -1,10 +1,10 @@
-import { BsCodeSlash, MdOutlineMiscellaneousServices } from "../../app/index";
+import { BsCodeSlash, MdOutlineMiscellaneousServices, secondaryText } from "../../app/index";
 
 export const skills = [
   {
     title: "Development",
     subTitle: "Frontend",
-    icon: <BsCodeSlash style={{ fontSize: 80, color: "#fff" }} />,
+    icon: <BsCodeSlash style={{ fontSize: 80, color: secondaryText }} />,
     skills: [
       "React",
       "Redux",
@@ -21,7 +21,7 @@ export const skills = [
   {
     title: "Development",
     subTitle: "Backend",
-    icon: <BsCodeSlash style={{ fontSize: 80, color: "#fff" }} />,
+    icon: <BsCodeSlash style={{ fontSize: 80, color: secondaryText }} />,
     skills: [
       "Node.js",
       "Express.js",
@@ -41,7 +41,7 @@ export const skills = [
     title: "AWS Services",
     subTitle: "Services",
     icon: (
-      <MdOutlineMiscellaneousServices style={{ fontSize: 80, color: "#fff" }} />
+      <MdOutlineMiscellaneousServices style={{ fontSize: 80, color: secondaryText }} />
     ),
     skills: [
       "AWS S3 Storage",
@@ -62,7 +62,7 @@ export const skills = [
     title: "Firebase/Other Services",
     subTitle: "Services",
     icon: (
-      <MdOutlineMiscellaneousServices style={{ fontSize: 80, color: "#fff" }} />
+      <MdOutlineMiscellaneousServices style={{ fontSize: 80, color: secondaryText }} />
     ),
     skills: [
       "Firebase Storage",

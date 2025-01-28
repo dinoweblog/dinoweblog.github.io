@@ -6,6 +6,7 @@ import AboutMeInfo from "./AboutMeInfo";
 import Education from "./education/Education";
 import Experience from "./experience/Experience";
 import GithubStats from "./githubStats/GithubStats";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [index, setIndex] = useState(1);
@@ -19,10 +20,16 @@ const About = () => {
         page="About Me"
         title="About Me"
         color={primary}
-        style={{ width: "80%" }}
         id="about"
       >
-        <AboutMeInfo />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} // Start slightly below
+          animate={{ opacity: 1, y: 0 }} // Slide up to its original position
+          exit={{ opacity: 0, y: 20 }} // Slide down when exiting
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <AboutMeInfo />
+        </motion.div>
       </Wrapper>
       <Box sx={{ bgcolor: primary, pt: 5, pb: 10 }}>
         <Box sx={{ width: "80%", m: "auto" }}>
@@ -47,9 +54,11 @@ const About = () => {
               }}
               variant="outlined"
               onClick={() => handleIndex(1)}
+              id="experience"
             >
-              Education
+              Experience
             </Button>
+
             <Button
               sx={{
                 width: "100%",
@@ -65,10 +74,10 @@ const About = () => {
               variant="outlined"
               onClick={() => handleIndex(2)}
             >
-              Experience
+              Education
             </Button>
           </Box>
-          {index === 1 ? <Education /> : <Experience />}
+          {index === 1 ? <Experience /> : <Education />}
         </Box>
 
         <GithubStats />

@@ -1,6 +1,6 @@
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
-import { primary } from "../app/index";
+import { primary, secondaryText } from "../app/index";
 import ResumeBtn from "../components/button/ResumeBtn";
 
 const Info = () => {
@@ -9,13 +9,20 @@ const Info = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: { xs: 5, sm: 8 },
-        mt: { xs: 10, sm: 10, md: 0 },
+        gap: { xs: 5, sm: 3 },
+        mt: { xs: 5, sm: 10, md: 0 },
         ml: { xs: "5%", sm: "5%", md: 0 },
         p: { xs: 1, sm: 0, md: 0 },
       }}
     >
-      <Box>
+      <Box
+        sx={{
+          background: `linear-gradient(to bottom, #ffffff 0%, ${secondaryText} 100%)`,
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          display: "inline-block",
+        }}
+      >
         <Typography
           variant="h1"
           sx={{
@@ -46,13 +53,10 @@ const Info = () => {
         variant="body1"
         sx={{ color: (theme) => theme.palette.secondary.main }}
       >
-        Full Stack Web Developer & Freelancer
+        Full Stack Developer & Freelancer
       </Typography>
 
-      <ResumeBtn
-        endIcon={<KeyboardDoubleArrowRight />}
-        style={{ bgcolor: primary }}
-      >
+      <ResumeBtn endIcon={<KeyboardDoubleArrowRight />} style={{ mt: 4 }}>
         Get Resume
       </ResumeBtn>
     </Box>

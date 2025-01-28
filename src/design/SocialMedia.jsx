@@ -1,5 +1,5 @@
 import { Box, Link } from "@mui/material";
-import { primary } from "../app/index";
+import { primary, secondaryText } from "../app/index";
 import { socialIcon } from "./constant";
 
 const socialMedia = ({ style, sx }) => {
@@ -24,9 +24,10 @@ const socialMedia = ({ style, sx }) => {
             transition: "all .5s ease",
             ...i.style,
             "&:hover": {
-              bgcolor: "#ffffff",
+              bgcolor: secondaryText,
+              borderColor: secondaryText,
               "& .MuiSvgIcon-root": {
-                color: primary,
+                color: "#ffffff",
               },
             },
             ...style,

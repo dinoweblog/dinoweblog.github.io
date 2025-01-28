@@ -3,6 +3,7 @@ import { primary } from "../../app/uiCore/themeColor";
 import CircleBorder from "../../design/CircleBorder2";
 import Info from "../../design/Info";
 import ProfilePicWithIcon from "../../design/ProfilePicWithIcon";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -38,9 +39,17 @@ const Home = () => {
               md: "block",
             },
             pl: { md: "10%" },
+            zIndex: "100 !important",
           }}
         >
-          <Info />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} // Start slightly below
+            animate={{ opacity: 1, y: 0 }} // Slide up to its original position
+            exit={{ opacity: 0, y: 20 }} // Slide down when exiting
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+          >
+            <Info />
+          </motion.div>
         </Box>
         <Box
           sx={{
@@ -54,7 +63,14 @@ const Home = () => {
             justifyContent: "end",
           }}
         >
-          <ProfilePicWithIcon />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} // Start slightly below
+            animate={{ opacity: 1, y: 0 }} // Slide up to its original position
+            exit={{ opacity: 0, y: 20 }} // Slide down when exiting
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+          >
+            <ProfilePicWithIcon />
+          </motion.div>
         </Box>
 
         <Box

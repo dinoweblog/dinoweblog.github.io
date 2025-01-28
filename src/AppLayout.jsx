@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Footer, GoToTopBtn, Header } from "./components";
+import { Footer, GoToTopBtn, Header, AppBar } from "./components";
 
 const AppLayout = () => {
   return (
     <Box>
-      <Header />
+      <AppBar />
       <Box>
         <Outlet />
       </Box>

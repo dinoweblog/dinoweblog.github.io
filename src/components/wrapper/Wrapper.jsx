@@ -7,7 +7,7 @@ const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
     <Box sx={{ bgcolor: color }} id={id}>
       <Box
         sx={{
-          width: "80%",
+          width: { xs: "90%", md: "80%" },
           m: "auto",
           pt: 15,
           pb: 15,

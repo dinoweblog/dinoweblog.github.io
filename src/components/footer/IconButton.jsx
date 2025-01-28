@@ -1,5 +1,5 @@
 import { Link, Typography } from "@mui/material";
-import { primary } from "../../app/index";
+import { primary, secondaryText } from "../../app/index";
 import { CustomButton } from "../button";
 
 const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
@@ -17,8 +17,8 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
         textDecoration: "none",
         "&:hover": {
           "& .MuiButton-root": {
-            bgcolor: "#ffffff",
-            color: primary,
+            bgcolor: "transparent",
+            color: "#ffffff",
           },
         },
       }}
@@ -37,8 +37,8 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
           minWidth: 0,
           p: 3,
           "&:hover": {
-            bgcolor: "#ffffff",
-            color: primary,
+            bgcolor: secondaryText,
+            color: "#ffffff",
           },
           "& .MuiButton-endIcon": {
             m: 0,

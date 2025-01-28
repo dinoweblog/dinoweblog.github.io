@@ -47,6 +47,9 @@ const SliderDiv = styled(Slider)`
   }
   .slick-slide {
     padding: 0 20px;
+    @media (max-width: 767px) {
+      padding: 0 !important;
+    }
   }
   .slick-list {
     padding: 0 20% 0 0;

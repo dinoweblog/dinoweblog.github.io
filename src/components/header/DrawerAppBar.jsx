@@ -25,23 +25,25 @@ const DrawerAppBar = ({ handleDrawerToggle, open }) => {
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-          <Logo />
+          {/* <Logo /> */}
         </Box>
         <Divider style={{ color: "red" }} />
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems: "flex-start",
             gap: 2,
             mt: 2,
             mb: 4,
+            px: 4,
           }}
         >
           {navItems.map((item) => (
             <HashLink key={item} item={item} />
           ))}
         </Box>
-        <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn>
+        {/* <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn> */}
       </Box>
     </Drawer>
   );

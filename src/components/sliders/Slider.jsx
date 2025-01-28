@@ -15,9 +15,9 @@ const SliderDiv = styled(Slider)`
   }
   .slick-slide {
     padding: 0 10px;
-  }
-  .slick-list {
-    padding: 0 20% 0 0;
+    @media (max-width: 767px) {
+      padding: 0 !important;
+    }
   }
 
   .slick-dots button:before {
@@ -25,9 +25,6 @@ const SliderDiv = styled(Slider)`
     opacity: 1;
     font-size: 16px;
     margin-top: 10px;
-  }
-  .slick-list {
-    padding: 0 20% 0 0 !important;
   }
 `;
 
