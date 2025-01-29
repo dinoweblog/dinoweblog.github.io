@@ -52,7 +52,7 @@ const ContactDetails = ({ sx }) => {
 
         <ResumeBtn
           startIcon={<ImFilePdf />}
-          style={{ height: 30, p: 3, borderRadius: 0 }}
+          style={{ height: 30, p: 3, borderRadius: 2 }}
           href={RESUME_FILE}
         >
           Download Resume

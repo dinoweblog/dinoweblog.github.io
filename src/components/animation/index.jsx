@@ -1,16 +1,23 @@
-import { motion } from "framer-motion";
+import React from "react";
+import { useIntersectionObserver } from "./utils";
 
-const About = ({ children }) => {
+const AnimatedSection = ({
+  children,
+  animation = "",
+  className = "",
+}) => {
+  const [ref, isVisible] = useIntersectionObserver();
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
+    <div
+      ref={ref}
+      className={`animate-on-scroll ${animation} ${
+        isVisible ? "is-visible" : ""
+      } ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
-export default About;
+export default AnimatedSection;

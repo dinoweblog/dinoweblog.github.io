@@ -3,7 +3,7 @@ import { primary } from "../../app/uiCore/themeColor";
 import CircleBorder from "../../design/CircleBorder2";
 import Info from "../../design/Info";
 import ProfilePicWithIcon from "../../design/ProfilePicWithIcon";
-import { motion } from "framer-motion";
+import AnimatedSection from "../animation";
 
 const Home = () => {
   return (
@@ -42,14 +42,9 @@ const Home = () => {
             zIndex: "100 !important",
           }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} // Start slightly below
-            animate={{ opacity: 1, y: 0 }} // Slide up to its original position
-            exit={{ opacity: 0, y: 20 }} // Slide down when exiting
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
-          >
+          <AnimatedSection animation="slide-left">
             <Info />
-          </motion.div>
+          </AnimatedSection>
         </Box>
         <Box
           sx={{
@@ -63,21 +58,18 @@ const Home = () => {
             justifyContent: "end",
           }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} // Start slightly below
-            animate={{ opacity: 1, y: 0 }} // Slide up to its original position
-            exit={{ opacity: 0, y: 20 }} // Slide down when exiting
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
-          >
+          <AnimatedSection animation="slide-right">
             <ProfilePicWithIcon />
-          </motion.div>
+          </AnimatedSection>
         </Box>
 
         <Box
           flex={1}
           sx={{ display: { xs: "block", sm: "block", md: "none" } }}
         >
-          <Info />
+          <AnimatedSection animation="slide-left">
+            <Info />
+          </AnimatedSection>
         </Box>
       </Box>
       <Box

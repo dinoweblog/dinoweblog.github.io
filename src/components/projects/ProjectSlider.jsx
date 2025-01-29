@@ -7,6 +7,7 @@ import { useRef } from "react";
 import {
   MdKeyboardDoubleArrowLeft,
   MdKeyboardDoubleArrowRight,
+  secondaryText,
 } from "../../app/index";
 import ProjectCard from "./ProjectCard";
 import {
@@ -72,9 +73,13 @@ const SliderDiv = styled(Slider)`
     color: #858792;
     opacity: 1;
     font-size: 16px;
+    transition: all 0.3s ease-in-out !important;
   }
-  .slick-list {
-    padding: 0 20% 0 0 !important;
+
+  .slick-dots .slick-active button:before {
+    color: ${secondaryText} !important;
+    border-radius: 50%;
+    transform: scale(1.4);
   }
 `;
 
@@ -96,6 +101,9 @@ export const ProjectSlider = () => {
     slidesToScroll: 1,
     dots: true,
     arrows: false,
+    // autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
     appendDots: (dots) => (
       <Box
         style={{

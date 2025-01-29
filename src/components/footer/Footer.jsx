@@ -1,18 +1,13 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { primary } from "../../app/uiCore/themeColor";
-import { RxPause, BsTelephoneFill, FiMail } from "../../app/index";
-import CircleBorder from "../../design/CircleBorder2";
-import IconButton from "./IconButton";
-import Logo from "../header/Logo";
-import SocialIconRow from "./SocialIconRow";
 
-const style = {
-  position: "absolute",
-  width: "400px",
-  height: "400px",
-  display: { xs: "none", sm: "block" },
-  top: -200,
-};
+// const style = {
+//   position: "absolute",
+//   width: "400px",
+//   height: "400px",
+//   display: { xs: "none", sm: "block" },
+//   top: -200,
+// };
 
 const Footer = () => {
   return (

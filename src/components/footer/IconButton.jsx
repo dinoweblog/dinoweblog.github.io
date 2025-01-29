@@ -1,5 +1,5 @@
 import { Link, Typography } from "@mui/material";
-import { primary, secondaryText } from "../../app/index";
+import { secondaryText } from "../../app/index";
 import { CustomButton } from "../button";
 
 const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {

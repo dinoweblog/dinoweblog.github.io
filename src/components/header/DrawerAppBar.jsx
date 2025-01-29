@@ -1,10 +1,7 @@
-import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { Box, Divider, Drawer } from "@mui/material";
 import { primary } from "../../app/index";
-import ResumeBtn from "../button/ResumeBtn";
 import { navItems } from "./constant";
 import HashLink from "./HashLink";
-import Logo from "./Logo";
 
 const DrawerAppBar = ({ handleDrawerToggle, open }) => {
   return (

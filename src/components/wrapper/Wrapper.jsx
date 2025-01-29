@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { RxPause } from "../../app/index";
+import AnimatedSection from "../animation";
 
 const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
   return (
@@ -14,24 +15,26 @@ const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
           ...style,
         }}
       >
-        <Box sx={{ mb: 10 }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: (theme) => theme.palette.secondary.main,
-              letterSpacing: 2,
-              display: "flex",
-              alignItems: "center",
-              gap: 2,
-              ...textCenter,
-            }}
-          >
-            <RxPause /> {`${page}`}
-          </Typography>
-          <Typography variant="h1" mt={4}>
-            {title}
-          </Typography>
-        </Box>
+        <AnimatedSection animation="slide-left">
+          <Box sx={{ mb: 10 }}>
+            <Typography
+              variant="body1"
+              sx={{
+                color: (theme) => theme.palette.secondary.main,
+                letterSpacing: 2,
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                ...textCenter,
+              }}
+            >
+              <RxPause /> {`${page}`}
+            </Typography>
+            <Typography variant="h1" mt={4}>
+              {title}
+            </Typography>
+          </Box>
+        </AnimatedSection>
 
         {children}
       </Box>

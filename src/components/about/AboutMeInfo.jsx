@@ -33,7 +33,7 @@ const AboutMeInfo = ({ isShow }) => {
       >
         <Box
           component="img"
-          src={"./assets/profile_2.png"}
+          src={"./assets/profile.png"}
           sx={{
             width: "60%",
             border: "1px solid",

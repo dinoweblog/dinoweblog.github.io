@@ -1,5 +1,5 @@
 import { RESUME_LINK } from "../../app/apis";
-import { primary, secondary, secondaryText } from "../../app/index";
+import { secondaryText } from "../../app/index";
 import CustomButton from "./CustomButton";
 
 const ResumeBtn = ({ style, endIcon, startIcon, children, href }) => {

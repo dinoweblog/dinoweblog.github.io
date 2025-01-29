@@ -21,9 +21,9 @@ const PageWrapper = ({ children, pageTitle, page }) => {
       <Box
         sx={{
           bgcolor: primary,
-          minHeight: 450,
+          minHeight: { xs: 350, sm: 420 },
           width: "100%",
-          pt: 20,
+          pt: { xs: 15, sm: 15, md: 18 },
           textAlign: "center",
           position: "relative",
           overflow: "hidden",

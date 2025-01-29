@@ -1,6 +1,6 @@
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
-import { primary, secondaryText } from "../app/index";
+import { secondaryText } from "../app/index";
 import ResumeBtn from "../components/button/ResumeBtn";
 
 const Info = () => {

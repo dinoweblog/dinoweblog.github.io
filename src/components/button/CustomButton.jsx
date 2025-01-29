@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { primary, secondary, secondaryText } from "../../app/uiCore/themeColor";
+import { secondaryText } from "../../app/uiCore/themeColor";
 import React from "react";
 
 const CustomButton = ({
@@ -29,7 +29,6 @@ const CustomButton = ({
         pr: 5,
         height: "60px",
         borderRadius: "30px",
-        color: secondaryText,
         bgcolor: secondaryText,
         "&:hover": {
           bgcolor: "transparent",

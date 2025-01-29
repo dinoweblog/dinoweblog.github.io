@@ -4,7 +4,6 @@ import { KeyboardDoubleArrowRight, Menu } from "@mui/icons-material";
 import DrawerAppBar from "./DrawerAppBar";
 import { useState } from "react";
 import { navItems } from "./constant";
-import Logo from "./Logo";
 import ResumeBtn from "../button/ResumeBtn";
 import HashLink from "./HashLink";
 import { useScrollDirection } from "./useScrollDirection";

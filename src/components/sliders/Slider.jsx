@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from "styled-components";
 import { Box } from "@mui/material";
+import { secondaryText } from "../../app/index";
 
 const SliderDiv = styled(Slider)`
   margin: auto;
@@ -21,10 +22,16 @@ const SliderDiv = styled(Slider)`
   }
 
   .slick-dots button:before {
-    color: #fff;
+    color: #858792;
     opacity: 1;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .slick-dots .slick-active button:before {
+    color: ${secondaryText} !important;
+    border-radius: 50%;
+    transform: scale(1.4);
   }
 `;
 
