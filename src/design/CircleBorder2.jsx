@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
+import { secondary } from "../app/index";
 
 const commonStyle = {
-  border: "1px solid #ffffff0d",
+  border: `1px solid ${secondary}`,
   width: "100%",
   height: "100%",
   borderRadius: "50%",

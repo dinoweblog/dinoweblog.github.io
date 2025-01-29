@@ -3,6 +3,7 @@ import { primary } from "../../app/uiCore/themeColor";
 import CircleBorder from "../../design/CircleBorder2";
 import Info from "../../design/Info";
 import ProfilePicWithIcon from "../../design/ProfilePicWithIcon";
+import AnimatedSection from "../animation";
 
 const Home = () => {
   return (
@@ -38,9 +39,12 @@ const Home = () => {
               md: "block",
             },
             pl: { md: "10%" },
+            zIndex: "100 !important",
           }}
         >
-          <Info />
+          <AnimatedSection animation="slide-left">
+            <Info />
+          </AnimatedSection>
         </Box>
         <Box
           sx={{
@@ -54,14 +58,18 @@ const Home = () => {
             justifyContent: "end",
           }}
         >
-          <ProfilePicWithIcon />
+          <AnimatedSection animation="slide-right">
+            <ProfilePicWithIcon />
+          </AnimatedSection>
         </Box>
 
         <Box
           flex={1}
           sx={{ display: { xs: "block", sm: "block", md: "none" } }}
         >
-          <Info />
+          <AnimatedSection animation="slide-left">
+            <Info />
+          </AnimatedSection>
         </Box>
       </Box>
       <Box

@@ -4,11 +4,10 @@ import { KeyboardDoubleArrowRight, Menu } from "@mui/icons-material";
 import DrawerAppBar from "./DrawerAppBar";
 import { useState } from "react";
 import { navItems } from "./constant";
-import Logo from "./Logo";
 import ResumeBtn from "../button/ResumeBtn";
 import HashLink from "./HashLink";
 import { useScrollDirection } from "./useScrollDirection";
-import { primary } from "../../app/index";
+import { primary, secondaryText } from "../../app/index";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -49,7 +48,18 @@ const Header = () => {
             p: 0,
           }}
         >
-          <Logo />
+          {/* <Logo /> */}
+          <Box sx={{ display: { sm: "flex", xs: "flex", md: "none" } }}>
+            <ResumeBtn
+              style={{
+                height: "44px",
+                px: 3,
+              }}
+              endIcon={<KeyboardDoubleArrowRight />}
+            >
+              Resume
+            </ResumeBtn>
+          </Box>
           <IconButton
             color="inherit"
             edge="start"
@@ -62,7 +72,7 @@ const Header = () => {
             sx={{
               display: { xs: "none", sm: "none", md: "flex", gap: 30 },
               "& a:hover": {
-                color: "#fff !important",
+                color: `${secondaryText} !important`,
               },
             }}
           >

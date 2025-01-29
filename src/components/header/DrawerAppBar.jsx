@@ -1,10 +1,7 @@
-import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { Box, Divider, Drawer } from "@mui/material";
 import { primary } from "../../app/index";
-import ResumeBtn from "../button/ResumeBtn";
 import { navItems } from "./constant";
 import HashLink from "./HashLink";
-import Logo from "./Logo";
 
 const DrawerAppBar = ({ handleDrawerToggle, open }) => {
   return (
@@ -25,23 +22,25 @@ const DrawerAppBar = ({ handleDrawerToggle, open }) => {
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-          <Logo />
+          {/* <Logo /> */}
         </Box>
         <Divider style={{ color: "red" }} />
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems: "flex-start",
             gap: 2,
             mt: 2,
             mb: 4,
+            px: 4,
           }}
         >
           {navItems.map((item) => (
             <HashLink key={item} item={item} />
           ))}
         </Box>
-        <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn>
+        {/* <ResumeBtn endIcon={<KeyboardDoubleArrowRight />}>Resume</ResumeBtn> */}
       </Box>
     </Drawer>
   );

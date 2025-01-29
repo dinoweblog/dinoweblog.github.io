@@ -7,16 +7,23 @@ import { useRef } from "react";
 import {
   MdKeyboardDoubleArrowLeft,
   MdKeyboardDoubleArrowRight,
-  primary,
+  secondaryText,
 } from "../../app/index";
 import ProjectCard from "./ProjectCard";
-import { Box } from "@mui/material";
+import {
+  Box,
+  IconButton as IconButtonMui,
+  List,
+  ListItem,
+} from "@mui/material";
 import { projectData } from "./constant";
+import { Link } from "react-router-dom";
 
 const SliderDiv = styled(Slider)`
   margin: auto;
   width: 100%;
   margin-top: 20px;
+  padding-bottom: 50px;
   .skills_card {
     width: 450px;
   }
@@ -41,23 +48,38 @@ const SliderDiv = styled(Slider)`
   }
   .slick-slide {
     padding: 0 20px;
+    @media (max-width: 767px) {
+      padding: 0 !important;
+    }
   }
   .slick-list {
     padding: 0 20% 0 0;
   }
 
   .slick-dots {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a.custom-button {
+      border: none;
+      padding: 5px;
+      margin-left: 20px;
+      cursor: pointer;
+      margin-top: 10px !important;
+    }
   }
 
   .slick-dots button:before {
-    color: ${primary};
+    color: #858792;
     opacity: 1;
     font-size: 16px;
-    margin-top: 15px;
+    transition: all 0.3s ease-in-out !important;
   }
-  .slick-list {
-    padding: 0 20% 0 0 !important;
+
+  .slick-dots .slick-active button:before {
+    color: ${secondaryText} !important;
+    border-radius: 50%;
+    transform: scale(1.4);
   }
 `;
 
@@ -79,6 +101,47 @@ export const ProjectSlider = () => {
     slidesToScroll: 1,
     dots: true,
     arrows: false,
+    // autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    appendDots: (dots) => (
+      <Box
+        style={{
+          display: { xs: "block", sm: "flex", md: "flex", lg: "flex" },
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <List
+          style={{
+            display: { xs: "block", sm: "flex", md: "flex", lg: "flex" },
+            alignItems: "center",
+            margin: 0,
+            padding: 0,
+          }}
+        >
+          {dots.map((dot, index) => (
+            <ListItem
+              key={index}
+              style={{ display: "inline-flex", padding: 0 }}
+            >
+              {dot}
+            </ListItem>
+          ))}
+        </List>
+        <Link to="/projects" style={{ marginLeft: "20px" }}>
+          <IconButtonMui
+            className="custom-button"
+            sx={{
+              color: "#EEEEEE",
+              mt: "8px",
+            }}
+          >
+            <MdKeyboardDoubleArrowRight />
+          </IconButtonMui>
+        </Link>
+      </Box>
+    ),
     responsive: [
       {
         breakpoint: 1000,

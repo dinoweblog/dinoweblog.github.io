@@ -102,6 +102,7 @@ const ContactForm = () => {
             "&:hover": {
               bgcolor: primary,
             },
+            borderRadius: 2,
           }}
           type="submit"
           disabled={isactive}

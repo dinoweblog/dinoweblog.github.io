@@ -20,18 +20,19 @@ const ProfilePicWithIcon = () => {
           height: "100%",
           left: 0,
           zIndex: 9,
+          ml: { xs: -8, sm: 0 },
         }}
       />
       <Box
         component="img"
-        src={"./assets/Profile.png"}
+        src={"./assets/profile.png"}
         alt="profile"
         sx={{
           width: { xs: "90%", sm: "75%", md: "85%" },
           position: "relative",
           zIndex: 10,
-          mt: { xs: -3, sm: -2, md: 0, lg: -8 },
-          ml: { xs: -2, sm: -2 },
+          mt: { xs: -4, sm: -2, md: 0, lg: -8 },
+          ml: { xs: -4, sm: -2 },
         }}
       />
 
@@ -40,6 +41,7 @@ const ProfilePicWithIcon = () => {
           position: "absolute",
           top: 40,
           width: "100%",
+          ml: { xs: -3, sm: 0 },
         }}
       >
         <SocialMediaWithCircle />

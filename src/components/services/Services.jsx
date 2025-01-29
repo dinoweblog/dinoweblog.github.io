@@ -10,7 +10,6 @@ const Services = () => {
       page="My Working Areas"
       title="I Work On that"
       color={primary}
-      style={{ width: "80%" }}
     >
       <Box
         sx={{

@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { secondary } from "../../app/uiCore/themeColor";
+import { secondaryText } from "../../app/uiCore/themeColor";
+import React from "react";
 
 const CustomButton = ({
   style,
@@ -22,17 +23,25 @@ const CustomButton = ({
       }}
       sx={{
         border: "1px solid #3b3d49",
+        borderColor: secondaryText,
         transition: "all .5s ease",
         pl: 5,
         pr: 5,
         height: "60px",
         borderRadius: "30px",
-        color: "#fff",
+        bgcolor: secondaryText,
         "&:hover": {
-          bgcolor: secondary,
+          bgcolor: "transparent",
+          color: "#ffffff",
+          borderColor: secondaryText,
+          "& .MuiSvgIcon-root": {
+            color: "#ffffff",
+            transition: "all .5s ease",
+          },
         },
         fontSize: "16px",
         maxWidth: "240px",
+        color: "#ffffff",
         ...style,
       }}
       endIcon={endIcon}

@@ -1,23 +1,18 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { primary } from "../../app/uiCore/themeColor";
-import { RxPause, BsTelephoneFill, FiMail } from "../../app/index";
-import CircleBorder from "../../design/CircleBorder2";
-import IconButton from "./IconButton";
-import Logo from "../header/Logo";
-import SocialIconRow from "./SocialIconRow";
 
-const style = {
-  position: "absolute",
-  width: "400px",
-  height: "400px",
-  display: { xs: "none", sm: "block" },
-  top: -200,
-};
+// const style = {
+//   position: "absolute",
+//   width: "400px",
+//   height: "400px",
+//   display: { xs: "none", sm: "block" },
+//   top: -200,
+// };
 
 const Footer = () => {
   return (
     <Box sx={{ bgcolor: primary, position: "relative", overflow: "hidden" }}>
-      <Box
+      {/* <Box
         sx={{
           width: "90%",
           m: "auto",
@@ -96,6 +91,7 @@ const Footer = () => {
               icon={<FiMail />}
               isIcon
               href="mailto:dinoweblog@gmail.com"
+
             >
               dinoweblog@gmail.com
             </IconButton>
@@ -104,7 +100,7 @@ const Footer = () => {
             <SocialIconRow />
           </Box>
         </Box>
-      </Box>
+      </Box> */}
       <Divider color="#3b3d49" />
       <Box
         sx={{
@@ -120,7 +116,7 @@ const Footer = () => {
         <Typography variant="body2">
           © 2023 | Created By Dinesh Sharma
         </Typography>
-        <Logo />
+        {/* <Logo /> */}
       </Box>
     </Box>
   );

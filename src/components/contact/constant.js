@@ -9,6 +9,6 @@ export const contactDetails = [
   },
   {
     name: "Address",
-    value: "Bhagalpur, Bihar",
+    value: "Bhagalpur, Bihar, India",
   },
 ];

@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
+import "./components/animation/animation.css";
 import ThemeProvider from "./app/uiCore/theme/ThemeProvider";
 import AppRoutes from "./Routes";
 

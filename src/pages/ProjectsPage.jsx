@@ -10,17 +10,17 @@ const ProjectsPage = () => {
       <Box sx={{ bgcolor: secondary }}>
         <Box
           sx={{
-            width: "80%",
+            width: { xs: "85%", md: "85%", lg: "80%" },
             m: "auto",
-            pt: 15,
-            pb: 15,
+            pt: 8,
+            pb: 5,
             display: "grid",
             gridTemplateColumns: { xs: "100%", sm: "100%", md: "48% 48%" },
             justifyContent: "space-between",
           }}
         >
           {projectData.map((project) => (
-            <ProjectCard key={project.title} sx={{ mb: 10 }} data={project} />
+            <ProjectCard key={project.title} sx={{ mb: 5 }} data={project} />
           ))}
         </Box>
       </Box>

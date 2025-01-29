@@ -49,3 +49,20 @@ a {
   text-decoration: none;
   list-style: none;
 }
+
+.noise-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000; /* Base color */
+}
+
+.noise-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 2%, transparent 3%);
+  background-size: 3px 3px;
+  opacity: 0.1;
+  pointer-events: none;
+}

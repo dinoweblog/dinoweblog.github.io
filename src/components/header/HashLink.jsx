@@ -15,12 +15,12 @@ const HashLink = ({ item }) => {
             : `#${item.toLowerCase()}`
         )
           ? {
-              color: "#fff",
+              color: "#8b5cf6",
             }
           : {
               color: "#858792",
               "& a": {
-                color: "#fff",
+                color: "#8b5cf6",
               },
             }
       }

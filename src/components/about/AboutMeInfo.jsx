@@ -33,7 +33,7 @@ const AboutMeInfo = ({ isShow }) => {
       >
         <Box
           component="img"
-          src={"./assets/Profile.png"}
+          src={"./assets/profile.png"}
           sx={{
             width: "60%",
             border: "1px solid",
@@ -64,7 +64,7 @@ const AboutMeInfo = ({ isShow }) => {
             lineHeight: 1.5,
           }}
         >
-          Full Stack Web Developer & Freelancer
+          Full Stack Developer & Freelancer
         </Typography>
         <Typography
           variant="body2"
