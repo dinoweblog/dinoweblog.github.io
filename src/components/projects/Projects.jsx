@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <Wrapper
       page="Awesome Portfolio"
-      title="My Complete Projects"
+      title="Projects"
       color={secondary}
       style={{ width: "90%", position: "relative" }}
       id="projects"

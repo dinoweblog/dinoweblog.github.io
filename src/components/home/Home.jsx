@@ -52,10 +52,10 @@ const Home = () => {
               md: 2,
               lg: 1.3,
             },
-            mr: 1,
+            mr: { md: 1 },
             pr: { md: "5%" },
             display: "flex",
-            justifyContent: "end",
+            justifyContent: { xs: "center", sm: "center", md: "end" },
           }}
         >
           <AnimatedSection animation="slide-right">

@@ -18,9 +18,9 @@ const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
         <AnimatedSection animation="slide-left">
           <Box sx={{ mb: 10 }}>
             <Typography
-              variant="body1"
+              variant="h1"
               sx={{
-                color: (theme) => theme.palette.secondary.main,
+                // color: (theme) => theme.palette.secondary.main,
                 letterSpacing: 2,
                 display: "flex",
                 alignItems: "center",
@@ -28,11 +28,11 @@ const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
                 ...textCenter,
               }}
             >
-              <RxPause /> {`${page}`}
+              <RxPause /> {`${title}`}
             </Typography>
-            <Typography variant="h1" mt={4}>
+            {/* <Typography variant="h1" mt={4}>
               {title}
-            </Typography>
+            </Typography> */}
           </Box>
         </AnimatedSection>
 

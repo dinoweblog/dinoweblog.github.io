@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <Wrapper
       page="My Skills"
-      title="Technical Skills"
+      title="Skills"
       color={secondary}
       id="skills"
     >

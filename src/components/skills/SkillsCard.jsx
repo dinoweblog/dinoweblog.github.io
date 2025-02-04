@@ -41,7 +41,7 @@ const SkillsCard = ({ data }) => {
         }}
       >
         {data.skills.map((s) => (
-          <ListItem sx={{ fontSize: "1rem", p: 0, pt: 0.5 }}>
+          <ListItem key={s} sx={{ fontSize: "1rem", p: 0, pt: 0.5 }}>
             <ListItemIcon>
               <KeyboardDoubleArrowRight
                 sx={{ color: (theme) => theme.palette.secondary.main }}

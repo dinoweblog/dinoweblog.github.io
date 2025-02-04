@@ -17,7 +17,7 @@ const ContactDetails = ({ sx }) => {
         }}
       >
         {contactDetails.map((item) => (
-          <Box sx={{ bgcolor: secondary, p: 5 }}>
+          <Box key={item.name} sx={{ bgcolor: secondary, p: 5 }}>
             <Typography variant="h4">{`${item.name}:`}</Typography>
             <Typography variant="body2" sx={{ mt: 2 }}>
               {item.value}

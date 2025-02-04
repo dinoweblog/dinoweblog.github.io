@@ -20,7 +20,7 @@ const ExperienceCard = ({ data }) => {
       </Typography>
       <List>
         {data.responsibility.map((text) => (
-          <ListItem disablePadding>
+          <ListItem key={text} disablePadding>
             <ListItemIcon
               sx={{ color: (theme) => theme.palette.secondary.main }}
             >

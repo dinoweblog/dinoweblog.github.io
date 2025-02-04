@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <Box sx={{ mt: 10 }}>
       {education.map((data) => (
-        <ContentCard data={data} />
+        <ContentCard key={data.degree} data={data} />
       ))}
     </Box>
   );

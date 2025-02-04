@@ -168,7 +168,7 @@ export const ProjectSlider = () => {
     <Box>
       <SliderDiv ref={(slider) => (sliderRef.current = slider)} {...settings}>
         {projectData.map((project) => (
-          <ProjectCard data={project} />
+          <ProjectCard key={project.title} data={project} />
         ))}
       </SliderDiv>
 
@@ -181,7 +181,20 @@ export const ProjectSlider = () => {
           right: 0,
         }}
       >
-        <IconButton to={"/projects"}>All</IconButton>
+        <IconButton
+          to={"/projects"}
+          btnsx={{ bgcolor: "transparent", color: "#ffffff" }}
+          sx={{
+            "&:hover": {
+              "& .MuiButton-root": {
+                bgcolor: secondaryText,
+                color: "#ffffff",
+              },
+            },
+          }}
+        >
+          All
+        </IconButton>
         <IconButton
           icon={<MdKeyboardDoubleArrowLeft />}
           onClick={handlePrevious}

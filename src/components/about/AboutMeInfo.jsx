@@ -8,6 +8,7 @@ import {
 } from "../../app/index";
 import { CustomButton } from "../button";
 import ResumeBtn from "../button/ResumeBtn";
+import profileImage from "../assets/Profile.png";
 
 const AboutMeInfo = ({ isShow }) => {
   return (
@@ -33,7 +34,7 @@ const AboutMeInfo = ({ isShow }) => {
       >
         <Box
           component="img"
-          src={"./assets/profile.png"}
+          src={profileImage}
           sx={{
             width: "60%",
             border: "1px solid",

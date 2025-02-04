@@ -24,7 +24,7 @@ const SkillsPage = () => {
           }}
         >
           {skills.map((item) => (
-            <SkillsCard data={item} />
+            <SkillsCard key={item.title} data={item} />
           ))}
         </Box>
       </Box>

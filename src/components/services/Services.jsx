@@ -7,8 +7,8 @@ import ServicesCard from "./ServicesCard";
 const Services = () => {
   return (
     <Wrapper
-      page="My Working Areas"
-      title="I Work On that"
+      page="I Work On that"
+      title="My Working Areas"
       color={primary}
     >
       <Box
@@ -24,7 +24,7 @@ const Services = () => {
         }}
       >
         {services.map((item) => (
-          <ServicesCard text={item} />
+          <ServicesCard key={item.title} text={item} />
         ))}
       </Box>
     </Wrapper>

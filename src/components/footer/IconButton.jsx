@@ -2,7 +2,16 @@ import { Link, Typography } from "@mui/material";
 import { secondaryText } from "../../app/index";
 import { CustomButton } from "../button";
 
-const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
+const IconButton = ({
+  icon,
+  href,
+  children,
+  isIcon,
+  onClick,
+  to,
+  sx,
+  btnsx,
+}) => {
   return (
     <Link
       sx={{
@@ -21,6 +30,7 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
             color: "#ffffff",
           },
         },
+        ...sx,
       }}
       href={href}
     >
@@ -43,6 +53,7 @@ const IconButton = ({ icon, href, children, isIcon, onClick, to }) => {
           "& .MuiButton-endIcon": {
             m: 0,
           },
+          ...btnsx,
         }}
       >
         {!isIcon ? children : null}

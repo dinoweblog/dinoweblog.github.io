@@ -19,7 +19,7 @@ const WorkExperience = () => {
         }}
       >
         {experienceData.map((item) => (
-          <ExperienceCard data={item} />
+          <ExperienceCard key={item.position} data={item} />
         ))}
       </Box>
     </Wrapper>

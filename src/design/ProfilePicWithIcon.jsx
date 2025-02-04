@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { primary } from "../app/uiCore/themeColor";
 import SocialMediaWithCircle from "./SocialMediaWithCircle";
+import profileImage from "../components/assets/Profile.png";
 
 const ProfilePicWithIcon = () => {
   return (
@@ -25,7 +26,7 @@ const ProfilePicWithIcon = () => {
       />
       <Box
         component="img"
-        src={"./assets/profile.png"}
+        src={profileImage}
         alt="profile"
         sx={{
           width: { xs: "90%", sm: "75%", md: "85%" },

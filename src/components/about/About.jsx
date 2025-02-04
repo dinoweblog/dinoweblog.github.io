@@ -14,6 +14,24 @@ const About = () => {
     setIndex(ind);
   };
 
+  const buttonStyles = (isActive) => ({
+    width: "100%",
+    borderRadius: 0,
+    transition: "all .5s ease",
+    fontSize: { xs: "1.1rem", sm: "2rem", md: "3rem" },
+    bgcolor: isActive ? secondary : "transparent",
+    borderColor: isActive ? primary : "#3b3d49",
+    color: isActive ? "#fff" : "#BBBFCA",
+    "&:hover": {
+      bgcolor: isActive ? secondary : "rgba(59, 61, 73, 0.1)",
+      borderColor: "#3b3d49",
+    },
+    "&:active": {
+      bgcolor: secondary,
+      borderColor: primary,
+    },
+  });
+
   return (
     <Box className="item" sx={{ transition: "all 400ms" }}>
       <Wrapper page="About Me" title="About Me" color={primary} id="about">
@@ -33,37 +51,19 @@ const About = () => {
               }}
             >
               <Button
-                sx={{
-                  width: "100%",
-                  borderRadius: 0,
-                  transition: "all .5s ease",
-                  fontSize: { xs: "1.1rem", sm: "2rem", md: "3rem" },
-                  bgcolor: index === 1 ? secondary : "transparent",
-                  borderColor: index === 1 ? primary : "#3b3d49",
-                  "&:hover": {
-                    borderColor: "#3b3d49",
-                  },
-                }}
+                sx={buttonStyles(index === 1)}
                 variant="outlined"
                 onClick={() => handleIndex(1)}
+                disableRipple
               >
                 Experience
               </Button>
 
               <Button
-                sx={{
-                  width: "100%",
-                  borderRadius: 0,
-                  transition: "all .5s ease",
-                  fontSize: { xs: "1.1rem", sm: "2rem", md: "3rem" },
-                  bgcolor: index === 2 ? secondary : "transparent",
-                  borderColor: index === 2 ? primary : "#3b3d49",
-                  "&:hover": {
-                    borderColor: "#3b3d49",
-                  },
-                }}
+                sx={buttonStyles(index === 2)}
                 variant="outlined"
                 onClick={() => handleIndex(2)}
+                disableRipple
               >
                 Education
               </Button>

@@ -23,7 +23,8 @@ const ProjectCard = ({ data, sx }) => {
         <Box
           sx={{
             width: "100%",
-            height: { xs: 350, sm: 350, md: 500, lg: 550 },
+            height: { xs: 300, sm: 350, md: 400, lg: 550 },
+            maxHeight: { xs: 300, sm: 350, md: 400 },
             position: "relative",
             overflow: "hidden",
             bgcolor: primary,
@@ -55,10 +56,20 @@ const ProjectCard = ({ data, sx }) => {
 
           <Box
             sx={{
-              p: { xs: 4, sm: 8, md: 8, lg: 13 },
+              p: { xs: 4, sm: 6, md: 6, lg: 10 },
               zIndex: 20,
               width: "100%",
               position: "absolute",
+              overflow: "hidden",
+              "&:hover": {
+                p: { xs: 2, sm: 3, md: 4 },
+                top: { xs: "16px", sm: "24px", md: "32px" },
+                img: {
+                  transform: "scale(1.1)", // Zoom effect
+                  transition: "transform 0.8s ease-in-out",
+                  animation: "scrollImage 8s linear infinite",
+                },
+              },
             }}
           >
             <Box
@@ -67,6 +78,11 @@ const ProjectCard = ({ data, sx }) => {
               src={data.image}
               sx={{
                 width: "100%",
+                height: "auto",
+                minHeight: "100%",
+                objectFit: "cover",
+                cursor: "pointer",
+                transition: "transform 0.8s ease-in-out",
               }}
             />
           </Box>
@@ -147,6 +163,19 @@ const ProjectCard = ({ data, sx }) => {
           </Box>
         </Box>
       </Box>
+
+      <style>
+        {`
+          @keyframes scrollImage {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-50%);
+            }
+          }
+        `}
+      </style>
     </AnimatedSection>
   );
 };
