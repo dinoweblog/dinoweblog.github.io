@@ -177,7 +177,7 @@ export const ProjectSlider = () => {
           display: "flex",
           gap: 4,
           position: "absolute",
-          top: { xs: 280, sm: 250, md: 150 },
+          top: { xs: 200, sm: 200, md: 130 },
           right: 0,
         }}
       >

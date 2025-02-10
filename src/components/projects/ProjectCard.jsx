@@ -24,7 +24,7 @@ const ProjectCard = ({ data, sx }) => {
           sx={{
             width: "100%",
             height: { xs: 300, sm: 350, md: 400, lg: 550 },
-            maxHeight: { xs: 300, sm: 350, md: 400 },
+            maxHeight: { xs: 300, sm: 350, md: 400, lg: 550 },
             position: "relative",
             overflow: "hidden",
             bgcolor: primary,
@@ -65,9 +65,7 @@ const ProjectCard = ({ data, sx }) => {
                 p: { xs: 2, sm: 3, md: 4 },
                 top: { xs: "16px", sm: "24px", md: "32px" },
                 img: {
-                  transform: "scale(1.1)", // Zoom effect
-                  transition: "transform 0.8s ease-in-out",
-                  animation: "scrollImage 8s linear infinite",
+                  animation: "scrollImage 10s linear infinite",
                 },
               },
             }}

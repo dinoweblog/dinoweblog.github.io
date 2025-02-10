@@ -1,7 +1,15 @@
 import { TbBrandCss3, TbBrandHtml5, TbBrandJavascript } from "react-icons/tb";
 import { IoLogoNodejs } from "react-icons/io";
-import { FaAws } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
+import { FaAngular, FaAws } from "react-icons/fa";
+import {
+  SiFirebase,
+  SiAwslambda,
+  SiAmazonapigateway,
+  SiNextdotjs,
+  SiAmazonec2,
+  SiAwsamplify,
+} from "react-icons/si";
 import {
   SiJest,
   SiMui,
@@ -11,6 +19,7 @@ import {
   SiRedux,
   SiExpress,
 } from "react-icons/si";
+import { RiFlutterFill } from "react-icons/ri";
 
 const CSS = {
   logo: <TbBrandCss3 />,
@@ -26,7 +35,7 @@ const Javascript = {
 };
 const Nodejs = {
   logo: <IoLogoNodejs />,
-  name: "Nodejs",
+  name: "Node.js",
 };
 
 const Typescript = {
@@ -47,7 +56,7 @@ const AWS = {
 };
 const React = {
   logo: <SiReact />,
-  name: "React",
+  name: "React.js",
 };
 const Apollographql = {
   logo: <SiApollographql />,
@@ -63,7 +72,48 @@ const Redux = {
 };
 const Express = {
   logo: <SiExpress />,
-  name: "Express",
+  name: "Express.js",
+};
+
+const Angular = {
+  logo: <FaAngular />,
+  name: "Angular",
+};
+
+const Firebase = {
+  logo: <SiFirebase />,
+  name: "Firebase",
+};
+
+const Aws = {
+  logo: <FaAws />,
+  name: "AWS Services",
+};
+
+const AwsLambda = {
+  logo: <SiAwslambda />,
+  name: "AWS Lambda",
+};
+const AmazonApiGateway = {
+  logo: <SiAmazonapigateway />,
+  name: "AWS Api Gateway",
+};
+
+const Nextjs = {
+  logo: <SiNextdotjs />,
+  name: "Next.js",
+};
+const Flutter = {
+  logo: <RiFlutterFill />,
+  name: "Flutter",
+};
+const EC2 = {
+  logo: <SiAmazonec2 />,
+  name: "AWS EC2",
+};
+const Amplify = {
+  logo: <SiAwsamplify />,
+  name: "AWS Amplify ",
 };
 
 const OneSignal = {
@@ -84,11 +134,29 @@ const OneSignal = {
 
 export const projectData = [
   {
+    title: "BatteryPool BAAS Dashboard",
+    image: "./assets/projects/batterypool-dashboard.jpeg",
+    description:
+      "Developed and maintained a comprehensive Battery-as-a-Service (BaaS) dashboard for efficient battery-swapping operations. The platform streamlined driver management, asset tracking (batteries, chargers, swap stations), transactions, and subscriptions. Key features included driver onboarding, rental fee tracking, automated billing, real-time swap station monitoring (door control & energy tracking), and data reporting. Enabled seamless payment processing, subscription management, and activity monitoring for enhanced operational efficiency.",
+    techStack: [Angular, Firebase, AwsLambda, AmazonApiGateway],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
+  },
+  {
+    title: "DAK IT HUB - CRM Platform",
+    image: "./assets/projects/dak-crm.jpeg",
+    description:
+      "A powerful CRM platform designed to manage leads and campaigns efficiently. Features include user management, secure authentication, role-based access control, real-time notifications, and analytics dashboards. Streamlined sales and marketing workflows with data management tools for better decision-making.",
+    techStack: [Nextjs, Nodejs, Typescript, Mongodb, Aws],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
+  },
+  {
     title: "Millat App",
     image: "./assets/projects/millat-app.jpg",
     description:
-      "That is the official website for Millat (Linger Lifecycle PVT. LTD). I build the project individually for Millat (Linger Lifecycle PVT. LTD), by using React, Redux, Javascript, Mui, CSS.",
-    techStack: [Nodejs, Express, Mongodb, AWS, OneSignal],
+      "Millat App is an all-in-one Muslim lifestyle app that combines a Halal marketplace, prayer tools, and Islamic content platform. The application features a robust e-commerce system with shopping options, including a dedicated women's section, alongside essential religious tools like prayer notifications and digital Quran. Users can access Halal travel services and earn rewards.",
+    techStack: [Flutter, Nodejs, Express, Mongodb, AWS, OneSignal],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
   },
@@ -96,17 +164,16 @@ export const projectData = [
     title: "Millat Dashboard",
     image: "./assets/projects/millat-dashboard.jpg",
     description:
-      "That is the official website for Millat (Linger Lifecycle PVT. LTD). I build the project individually for Millat (Linger Lifecycle PVT. LTD), by using React, Redux, Javascript, Mui, CSS.",
+      "Millat Dashboard is a web-based admin/seller panel designed for managing products, rewards, and services within an e-commerce and informational platform. It includes features for user authentication, product listing and categorization, reward management, service entries (such as Duas and health tips), and a streamlined product creation process with attributes and pricing options. The dashboard provides an intuitive UI with search, filtering, and CRUD functionalities to enhance administrative efficiency.",
     techStack: [
+      React,
       Nodejs,
       Express,
       Mongodb,
-      AWS,
-      React,
       Redux,
       Javascript,
-      Mui,
-      CSS,
+      AWS,
+      OneSignal,
     ],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://dashboard.millat.co/",
@@ -116,7 +183,7 @@ export const projectData = [
     image: "./assets/projects/millat-co.jpg",
     description:
       "That is the official website for Millat (Linger Lifecycle PVT. LTD). I build the project individually for Millat (Linger Lifecycle PVT. LTD), by using React, Redux, Javascript, Mui, CSS.",
-    techStack: [React, Redux, Javascript, Mui, CSS],
+    techStack: [React, Javascript, Mui, CSS],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://millat.co/",
   },
@@ -124,18 +191,8 @@ export const projectData = [
     title: "CV Builder",
     image: "./assets/projects/cv-builder.jpg",
     description:
-      "That is the official website for Millat (Linger Lifecycle PVT. LTD). I build the project individually for Millat (Linger Lifecycle PVT. LTD), by using React, Redux, Javascript, Mui, CSS.",
-    techStack: [
-      Nodejs,
-      Express,
-      Mongodb,
-      AWS,
-      React,
-      Redux,
-      Javascript,
-      Mui,
-      CSS,
-    ],
+      "CV Builder is an intuitive web application that enables users to create professional resumes with customizable templates. It features a user-friendly interface for adding personal details, academic history, work experience, skills, and other sections. The platform offers modern, recruiter-approved designs with real-time previews and PDF export functionality.",
+    techStack: [React, Nodejs, Express, Mongodb, Mui],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://smartmaulvi.com/",
   },
@@ -144,17 +201,7 @@ export const projectData = [
     image: "./assets/projects/aapkafashions.jpg",
     description:
       "That is the e-commerce website, I worked as a freelancer and build the project individually in 30 days. I have worked on building UI features for authentication, home, products, product details, cart, wishlist, order, user account, address, and admin dashboard by using React, Redux, MUI",
-    techStack: [
-      React,
-      Redux,
-      Javascript,
-      Nodejs,
-      Express,
-      Mongodb,
-      AWS,
-      Mui,
-      CSS,
-    ],
+    techStack: [React, Redux, Nodejs, Express, Mongodb, AWS, Mui, CSS],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://aapka-fashions.vercel.app/",
   },
@@ -164,7 +211,7 @@ export const projectData = [
     image: "./assets/projects/petcare.jpg",
     description:
       "This is a solo project. It is a react and redux pet boarding booking website. A full-stack website developed by 2 days. I added features like login and signup for both users [admin, costumer], filter & sort according to price, & End to End Flow, etc.",
-    techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
+    techStack: [React, Redux, Nodejs, Express, Mongodb, CSS],
     githubUrl: "https://github.com/dinoweblog/Pet-Boarding-Site-FB",
     url: "https://petcare.vercel.app/",
   },
@@ -184,7 +231,6 @@ export const projectData = [
       Jest,
       Apollographql,
       Mui,
-      CSS,
     ],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
@@ -195,7 +241,7 @@ export const projectData = [
     image: "./assets/projects/e-mart.png",
     description:
       "This is a solo project, It is an e-commerce website that sells clothes products across websites . A full-stack solo project developed by 10 days. I added features like filter and sort products, cart manipulation, search functionality, order tracking, wishlist product & End to End Flow etc.",
-    techStack: [React, Redux, Javascript, Nodejs, Express, Mongodb, CSS],
+    techStack: [React, Redux, Nodejs, Express, Mongodb, CSS],
     githubUrl: "https://github.com/dinoweblog/e-Mart-ecommerce-website-FB",
     url: "https://e-mart-shop.vercel.app/",
   },

@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import { primary } from "../../../app/index";
 
 const ContentCard = ({ data, children, date }) => {
   return (
@@ -14,11 +13,11 @@ const ContentCard = ({ data, children, date }) => {
       <Box
         flex={2}
         sx={{
-          border: "1px solid",
-          borderColor: { xs: "#3b3d49", sm: "#3b3d49", md: primary },
-          pt: { xs: 3, sm: 3, md: 0 },
-          pb: 3,
-          pl: 3,
+          // border: "1px solid",
+          // borderColor: { xs: "#3b3d49", sm: "#3b3d49", md: primary },
+          // pt: { xs: 3, sm: 3, md: 0 },
+          pb: { xs: 0, sm: 0, md: 3 },
+          pl: { xs: 0, sm: 0, md: 3 },
         }}
       >
         <Typography
