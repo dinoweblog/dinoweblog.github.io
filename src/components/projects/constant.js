@@ -134,11 +134,20 @@ const OneSignal = {
 
 export const projectData = [
   {
-    title: "BatteryPool BAAS Dashboard",
+    title: "BAAS Dashboard - BatteryPool",
     image: "./assets/projects/batterypool-dashboard.jpeg",
     description:
       "Developed and maintained a comprehensive Battery-as-a-Service (BaaS) dashboard for efficient battery-swapping operations. The platform streamlined driver management, asset tracking (batteries, chargers, swap stations), transactions, and subscriptions. Key features included driver onboarding, rental fee tracking, automated billing, real-time swap station monitoring (door control & energy tracking), and data reporting. Enabled seamless payment processing, subscription management, and activity monitoring for enhanced operational efficiency.",
     techStack: [Angular, Firebase, AwsLambda, AmazonApiGateway],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
+  },
+  {
+    title: "Tools App - BatteryPool",
+    image: "./assets/projects/tools-app.jpeg",
+    description:
+      "A web-based platform designed for managing battery swapping and cash collection for electric vehicle (EV) battery stations. The system streamlines manual battery swaps, tracks financial transactions, and ensures operational efficiency through real-time monitoring.",
+    techStack: [React, Firebase],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
   },
@@ -152,19 +161,19 @@ export const projectData = [
     url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
   },
   {
-    title: "Millat App",
+    title: "Mobile App - Millat",
     image: "./assets/projects/millat-app.jpg",
     description:
-      "Millat App is an all-in-one Muslim lifestyle app that combines a Halal marketplace, prayer tools, and Islamic content platform. The application features a robust e-commerce system with shopping options, including a dedicated women's section, alongside essential religious tools like prayer notifications and digital Quran. Users can access Halal travel services and earn rewards.",
+      "Mobile App is an all-in-one Muslim lifestyle app that combines a Halal marketplace, prayer tools, and Islamic content platform. The application features a robust e-commerce system with shopping options, including a dedicated women's section, alongside essential religious tools like prayer notifications and digital Quran. Users can access Halal travel services and earn rewards.",
     techStack: [Flutter, Nodejs, Express, Mongodb, AWS, OneSignal],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://play.google.com/store/apps/details?id=com.app.linger&pcampaignid=web_share",
   },
   {
-    title: "Millat Dashboard",
+    title: "Dashboard - Millat",
     image: "./assets/projects/millat-dashboard.jpg",
     description:
-      "Millat Dashboard is a web-based admin/seller panel designed for managing products, rewards, and services within an e-commerce and informational platform. It includes features for user authentication, product listing and categorization, reward management, service entries (such as Duas and health tips), and a streamlined product creation process with attributes and pricing options. The dashboard provides an intuitive UI with search, filtering, and CRUD functionalities to enhance administrative efficiency.",
+      "The Dashboard is a web-based admin/seller panel designed for managing products, rewards, and services within an e-commerce and informational platform. It includes features for user authentication, product listing and categorization, reward management, service entries (such as Duas and health tips), and a streamlined product creation process with attributes and pricing options. The dashboard provides an intuitive UI with search, filtering, and CRUD functionalities to enhance administrative efficiency.",
     techStack: [
       React,
       Nodejs,
@@ -179,7 +188,7 @@ export const projectData = [
     url: "https://dashboard.millat.co/",
   },
   {
-    title: "Millat Official Website",
+    title: "Official Website - Millat",
     image: "./assets/projects/millat-co.jpg",
     description:
       "That is the official website for Millat (Linger Lifecycle PVT. LTD). I build the project individually for Millat (Linger Lifecycle PVT. LTD), by using React, Redux, Javascript, Mui, CSS.",
@@ -197,7 +206,7 @@ export const projectData = [
     url: "https://smartmaulvi.com/",
   },
   {
-    title: "AapkaFashion E-commerce Website",
+    title: "E-commerce Website - AapkaFashion",
     image: "./assets/projects/aapkafashions.jpg",
     description:
       "That is the e-commerce website, I worked as a freelancer and build the project individually in 30 days. I have worked on building UI features for authentication, home, products, product details, cart, wishlist, order, user account, address, and admin dashboard by using React, Redux, MUI",
@@ -237,7 +246,7 @@ export const projectData = [
   },
 
   {
-    title: "e-Mart E-commerce Website",
+    title: "E-commerce Website - E-Mart",
     image: "./assets/projects/e-mart.png",
     description:
       "This is a solo project, It is an e-commerce website that sells clothes products across websites . A full-stack solo project developed by 10 days. I added features like filter and sort products, cart manipulation, search functionality, order tracking, wishlist product & End to End Flow etc.",
@@ -246,7 +255,7 @@ export const projectData = [
     url: "https://e-mart-shop.vercel.app/",
   },
   {
-    title: "Unacademy Clone Website",
+    title: "Clone Website - Unacademy",
     image: "./assets/projects/unacademy.png",
     description:
       "Unacademy is a learning platform that provides content for major competitive examinations. A collaborative project built by a team of 5 executed in 6 days.",
@@ -255,7 +264,7 @@ export const projectData = [
     url: "https://unacademy-clone-kappa.vercel.app/",
   },
   {
-    title: "Nykaa Fashion Clone Website",
+    title: "Clone Website - Nykaa Fashion",
     image: "./assets/projects/nykaafashion.png",
     description:
       "It is an e-commerce website that sells beauty, wellness, and fashion products across websites . A full-stack clone of Nykaa Fashion developed by 6 members in time span of 6 days. We added features like Off Canvas Popup cart, filter products, sort products, cart manipulation& End to End Flow etc.",
@@ -264,7 +273,7 @@ export const projectData = [
     url: "https://nykaafashion.netlify.app/",
   },
   {
-    title: "Be Bodywise Clone Website",
+    title: "Clone Website - BeBodywise ",
     image: "./assets/projects/bebodywiseclone.png",
     description:
       "An e-commerce website for health related products. A collaborative project built by a team of 5 executed in 6 days. We added features like Off Canvas Popup cart, cart manipulation & End to End Flow etc.",
@@ -274,7 +283,7 @@ export const projectData = [
   },
 
   {
-    title: "Imgur Clone Website",
+    title: "Clone Website - Imgur",
     image: "./assets/projects/imgur.png",
     description:
       "This is a plain JavaScript imgur clone project. This project is developed in 3 days. I added different type of filter option, search functionality & two different view layout.",

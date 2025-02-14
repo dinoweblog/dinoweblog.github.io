@@ -28,21 +28,26 @@ const About = () => {
     },
     "&:active": {
       bgcolor: secondary,
-      borderColor: primary,
+      borderColor: "#3b3d49",
     },
+    boxShadow: "rgba(187, 134, 252, 0.3) -3px 3px",
+
+    // boxShadow: 'rgba(137, 46, 240, 0.4) -5px 5px, rgba(89, 20, 153, 0.3) -10px 10px, rgba(60, 20, 94, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px',
+    // boxShadow:
+    //   "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
   });
 
   return (
     <Box className="item" sx={{ transition: "all 400ms" }}>
       <Wrapper page="About Me" title="About Me" color={primary} id="about">
-        <AnimatedSection animation="slide-right">
+        {/* <AnimatedSection animation="slide-right"> */}
           <AboutMeInfo />
-        </AnimatedSection>
+        {/* </AnimatedSection> */}
       </Wrapper>
 
-      <Box sx={{ bgcolor: primary, pt: 5, pb: 10 }} id="experience">
+      <Box sx={{ bgcolor: primary, pt: 0, pb: 10 }} id="experience">
         <AnimatedSection animation="slide-left">
-          <Box sx={{ width: "80%", m: "auto" }}>
+          <Box sx={{ width: { xs: "90%", md: "80%" }, m: "auto" }}>
             <Box
               sx={{
                 height: { xs: "60px", sm: "100px" },

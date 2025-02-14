@@ -6,7 +6,7 @@ const ContentCard = ({ data, children, date }) => {
       sx={{
         display: "flex",
         flexDirection: { xs: "column", sm: "column", md: "row" },
-        gap: { xs: 5, sm: 5, md: 20, lg: 25 },
+        gap: { xs: 2, sm: 3, md: 20, lg: 25 },
         mt: 8,
       }}
     >

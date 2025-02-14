@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import { projectData } from "./constant";
 import { Link } from "react-router-dom";
+import AnimatedSection from "../animation";
 
 const SliderDiv = styled(Slider)`
   margin: auto;
@@ -174,35 +175,42 @@ export const ProjectSlider = () => {
 
       <Box
         sx={{
-          display: "flex",
-          gap: 4,
           position: "absolute",
-          top: { xs: 200, sm: 200, md: 130 },
+          top: { xs: 160, sm: 160, md: 100 },
           right: 0,
         }}
       >
-        <IconButton
-          to={"/projects"}
-          btnsx={{ bgcolor: "transparent", color: "#ffffff" }}
-          sx={{
-            "&:hover": {
-              "& .MuiButton-root": {
-                bgcolor: secondaryText,
-                color: "#ffffff",
-              },
-            },
-          }}
-        >
-          All
-        </IconButton>
-        <IconButton
-          icon={<MdKeyboardDoubleArrowLeft />}
-          onClick={handlePrevious}
-        />
-        <IconButton
-          icon={<MdKeyboardDoubleArrowRight />}
-          onClick={handleNext}
-        />
+        <AnimatedSection animation="slide-right">
+          <Box
+            sx={{
+              display: "flex",
+              gap: 4,
+            }}
+          >
+            <IconButton
+              to={"/projects"}
+              btnsx={{ bgcolor: "transparent", color: "#ffffff" }}
+              sx={{
+                "&:hover": {
+                  "& .MuiButton-root": {
+                    bgcolor: secondaryText,
+                    color: "#ffffff",
+                  },
+                },
+              }}
+            >
+              All
+            </IconButton>
+            <IconButton
+              icon={<MdKeyboardDoubleArrowLeft />}
+              onClick={handlePrevious}
+            />
+            <IconButton
+              icon={<MdKeyboardDoubleArrowRight />}
+              onClick={handleNext}
+            />
+          </Box>
+        </AnimatedSection>
       </Box>
     </Box>
   );

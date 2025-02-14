@@ -10,8 +10,8 @@ const Wrapper = ({ color, style, page, title, children, textCenter, id }) => {
         sx={{
           width: { xs: "90%", md: "80%" },
           m: "auto",
-          pt: 15,
-          pb: 15,
+          py: 10,
+          pb: 10,
           ...style,
         }}
       >
