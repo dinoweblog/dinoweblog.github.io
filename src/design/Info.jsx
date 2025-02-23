@@ -12,7 +12,7 @@ const Info = ({ aboutData, isLoading }) => {
         display: "flex",
         flexDirection: "column",
         gap: { xs: 5, sm: 3 },
-        mt: { xs: 5, sm: 10, md: 0 },
+        mt: { xs: 5, sm: 10, md: 10 },
         ml: { xs: "5%", sm: "5%", md: 0 },
         p: { xs: 1, sm: 0, md: 0 },
       }}

@@ -32,8 +32,8 @@ export const socialIcon = [
     url: "https://github.com/dinoweblog",
     icon: <GitHub sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
     style: {
-      right: { xs: "2%", sm: "14%", md: "10%" },
-      top: { xs: "16%", sm: "24%", md: "25%" },
+      right: { xs: "2%", sm: "15%", md: "11%" },
+      top: { xs: "16%", sm: "22%", md: "23%" },
     },
   },
 
@@ -42,8 +42,8 @@ export const socialIcon = [
     url: "https://www.linkedin.com/in/dino-web/",
     icon: <LinkedIn sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
     style: {
-      right: { xs: "19%", sm: "30%", md: "27%" },
-      top: { xs: "0%", sm: "12%", md: "10%" },
+      right: { xs: "19%", sm: "33%", md: "30%" },
+      top: { xs: "0%", sm: "9%", md: "7%" },
     },
   },
   {
@@ -51,8 +51,8 @@ export const socialIcon = [
     url: "https://twitter.com/imD1nesh",
     icon: <Twitter sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
     style: {
-      right: { xs: "-6%", sm: "8%", md: "6%" },
-      top: { xs: "39%", sm: "45%", md: "48%" },
+      right: { xs: "-5%", sm: "8%", md: "6%" },
+      top: { xs: "38%", sm: "43%", md: "46%" },
     },
   },
   {
@@ -60,8 +60,8 @@ export const socialIcon = [
     url: "mailto:dinoweblog@gmail.com",
     icon: <Email sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
     style: {
-      right: { xs: "-1%", sm: "14%", md: "12%" },
-      top: { xs: "64%", sm: "65%", md: "69%" },
+      right: { xs: "1%", sm: "15%", md: "15%" },
+      top: { xs: "63%", sm: "64%", md: "67%" },
     },
   },
 ];

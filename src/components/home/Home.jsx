@@ -23,7 +23,7 @@ const Home = ({ aboutData, loading }) => {
           m: "auto",
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
-          mt: { xs: 4, sm: 4, md: 10 },
+          mt: 4,
           boxSizing: "border-box",
         }}
       >
