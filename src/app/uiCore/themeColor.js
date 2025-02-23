@@ -3,3 +3,4 @@ export const secondary = "#2c2e2f";
 export const bdcolor = "#ffffff0d";
 export const primaryText = "#A6AEBF";
 export const secondaryText = "#8748e5";
+export const themeColor = "#8748e5";

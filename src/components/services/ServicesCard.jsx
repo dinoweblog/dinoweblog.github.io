@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { secondary } from "../../app/index";
 import AnimatedSection from "../animation";
 
-const ServicesCard = ({ icon, text }) => {
+const ServicesCard = ({ text }) => {
   return (
     <AnimatedSection className="animate-scale-in-on-scroll">
       <Box
@@ -14,9 +14,9 @@ const ServicesCard = ({ icon, text }) => {
           bgcolor: secondary,
           textAlign: "center",
           mb: 5,
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
         }}
       >
-        <Typography variant="h3">{icon}</Typography>
         <Box
           sx={{
             display: "flex",
@@ -25,12 +25,17 @@ const ServicesCard = ({ icon, text }) => {
           }}
         >
           <Typography
-            variant="h4"
-            sx={{ color: (theme) => theme.palette.secondary.main }}
+            variant="h2"
+            sx={{ fontSize: { xs: "1.5rem", sm: "1.7rem", md: "1.8rem" } }}
           >
             {text.type}
           </Typography>
-          <Typography variant="h3">{text.title}</Typography>
+          <Typography
+            variant="h4"
+            sx={{ color: (theme) => theme.palette.secondary.main, mt: 1 }}
+          >
+            {text.title}
+          </Typography>
         </Box>
       </Box>
     </AnimatedSection>

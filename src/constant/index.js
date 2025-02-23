@@ -108,7 +108,7 @@ export const education = [
 export const services = [
   {
     type: "Web App",
-    title: "Freelancing",
+    title: "Development",
   },
   {
     type: "Frontend",
@@ -119,7 +119,7 @@ export const services = [
     title: "Development",
   },
   {
-    type: "Services",
+    type: "Cloud Services",
     title: "AWS / Firebase",
   },
 ];

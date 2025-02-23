@@ -4,6 +4,7 @@ import * as TbIcons from "react-icons/tb";
 import * as FiIcons from "react-icons/fi";
 import * as FaIcons from "react-icons/fa";
 import React from "react";
+import { themeColor } from "./themeColor";
 
 const customIcons = {
   OneSignal: (
@@ -27,7 +28,7 @@ const useIcon = () => {
     if (customIcons[iconName]) {
       return React.cloneElement(customIcons[iconName], {
         style: {
-          color: "#8748e5",
+          color: themeColor,
           ...style,
         },
       });
@@ -41,7 +42,7 @@ const useIcon = () => {
           <IconComponent
             style={{
               fontSize: "24px",
-              color: "#8748e5",
+              color: themeColor,
               ...style,
             }}
           />
@@ -53,7 +54,7 @@ const useIcon = () => {
       <TbIcons.TbBox
         style={{
           fontSize: "24px",
-          color: "#8748e5",
+          color: themeColor,
           ...style,
         }}
       />
