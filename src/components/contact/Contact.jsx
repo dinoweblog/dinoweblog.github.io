@@ -5,7 +5,7 @@ import Wrapper from "../wrapper/Wrapper";
 import ContactForm from "./ContactForm";
 import AnimatedSection from "../animation";
 
-const Contact = () => {
+const Contact = ({ aboutData }) => {
   return (
     <Wrapper
       page="Contact Me"
@@ -21,7 +21,7 @@ const Contact = () => {
         }}
       >
         <AnimatedSection className="slide-up">
-          <ContactDetails />
+          <ContactDetails aboutData={aboutData} />
         </AnimatedSection>
         <AnimatedSection className="slide-down">
           <Box

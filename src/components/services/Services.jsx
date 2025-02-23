@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import { primary } from "../../app/index";
 import Wrapper from "../wrapper/Wrapper";
-import { services } from "./constant";
 import ServicesCard from "./ServicesCard";
+import { services } from "../../constant";
 
 const Services = () => {
   return (

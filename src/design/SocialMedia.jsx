@@ -1,6 +1,6 @@
 import { Box, Link } from "@mui/material";
 import { primary, primaryText, secondaryText } from "../app/index";
-import { socialIcon } from "./constant";
+import { socialIcon } from "../constant";
 
 const socialMedia = ({ style, sx }) => {
   return (

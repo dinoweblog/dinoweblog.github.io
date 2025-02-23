@@ -3,14 +3,14 @@ import { Box, Typography } from "@mui/material";
 import {
   MdKeyboardDoubleArrowRight,
   primary,
-  RESUME_FILE,
   secondary,
 } from "../../app/index";
 import { CustomButton } from "../button";
 import ResumeBtn from "../button/ResumeBtn";
 import profileImage from "../assets/Profile.png";
+import { jobTitle } from "../../constant";
 
-const AboutMeInfo = ({ isShow }) => {
+const AboutMeInfo = ({ isShow, aboutData }) => {
   return (
     <Box
       sx={{
@@ -43,7 +43,11 @@ const AboutMeInfo = ({ isShow }) => {
             pt: 1,
           }}
         />
-        <ResumeBtn endIcon={<Download />} href={RESUME_FILE}>
+        <ResumeBtn
+          endIcon={<Download />}
+          href={aboutData?.resumeDriverLink}
+          isDownload
+        >
           Resume
         </ResumeBtn>
       </Box>
@@ -55,26 +59,23 @@ const AboutMeInfo = ({ isShow }) => {
             lineHeight: 1.5,
           }}
         >
-          I'm Dinesh Sharma
+          {`I'm ${aboutData?.name || "Dinesh Sharma"}`}
         </Typography>
         <Typography
           variant="h1"
           sx={{
             color: (theme) => theme.palette.secondary.main,
-            fontSize: { xs: "2rem", sm: "2.5rem" },
+            fontSize: { xs: "1.5rem", sm: "2rem" },
             lineHeight: 1.5,
           }}
         >
-          Full Stack Developer & Freelancer
+          {aboutData?.jobTitle || jobTitle}
         </Typography>
         <Typography
           variant="body2"
           sx={{ color: (theme) => theme.palette.secondary.main, mt: 4 }}
         >
-          As an experienced full-stack developer specializing in the MERN stack.
-          Keenly interested in problem-solving and making user-centric products,
-          self-motivated and curious. Looking forward to honing my skills in a
-          challenging work environment.
+          {aboutData?.professionalSummary}
         </Typography>
 
         {isShow ? (

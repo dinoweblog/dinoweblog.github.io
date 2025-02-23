@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import { primary, secondary, ImFilePdf, RESUME_FILE } from "../../app/index";
+import { primary, secondary, ImFilePdf } from "../../app/index";
 import ResumeBtn from "../button/ResumeBtn";
 import SocialIconRow from "../footer/SocialIconRow";
-import { contactDetails } from "./constant";
+import { contactDetails } from "../../constant";
 
-const ContactDetails = ({ sx }) => {
+const ContactDetails = ({ sx, aboutData }) => {
   return (
     <Box flex={1} sx={sx}>
       <Box
@@ -53,7 +53,8 @@ const ContactDetails = ({ sx }) => {
         <ResumeBtn
           startIcon={<ImFilePdf />}
           style={{ height: 30, p: 3, borderRadius: 2 }}
-          href={RESUME_FILE}
+          href={aboutData?.resumeDriverLink}
+          isDownload
         >
           Download Resume
         </ResumeBtn>

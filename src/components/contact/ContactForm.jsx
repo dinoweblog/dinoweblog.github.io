@@ -17,38 +17,65 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleForm = (e) => {
     const { value, name } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const sendEmail = (e) => {
+  // Email validation regex
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      showErrorNotification("Name is required");
+      return false;
+    }
+    if (!formData.email.trim() || !validateEmail(formData.email)) {
+      showErrorNotification("Please enter a valid email address");
+      return false;
+    }
+    if (!formData.message.trim()) {
+      showErrorNotification("Message is required");
+      return false;
+    }
+    return true;
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await emailjs.sendForm(
         "service_fo1nohq",
         "template_nrid5vx",
         form.current,
         "FIBty7MTiwWaKgSmK"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          showSuccessNotification("Message sent");
-          setFormData({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.error(error.text);
-          showErrorNotification(error.text);
-        }
       );
+
+      console.log(result.text);
+      showSuccessNotification("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error.text);
+      showErrorNotification(error.text || "Failed to send message");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const isactive = !formData.name || !formData.email || !formData.message;
+  const isactive = !formData.name || !formData.email || !formData.message || isSubmitting;
 
   return (
     <form
@@ -68,6 +95,7 @@ const ContactForm = () => {
         type="text"
         onChange={handleForm}
         value={formData.name}
+        disabled={isSubmitting}
       />
       <Input
         placeholder="E-mail"
@@ -75,6 +103,7 @@ const ContactForm = () => {
         type="email"
         onChange={handleForm}
         value={formData.email}
+        disabled={isSubmitting}
       />
       <Input
         placeholder="Type your message..."
@@ -85,6 +114,7 @@ const ContactForm = () => {
         sx={{ "& .MuiInputBase-root": { p: 0 } }}
         onChange={handleForm}
         value={formData.message}
+        disabled={isSubmitting}
       />
       <Box
         sx={{
@@ -107,7 +137,7 @@ const ContactForm = () => {
           type="submit"
           disabled={isactive}
         >
-          Send
+          {isSubmitting ? "Sending..." : "Send"}
         </CustomButton>
       </Box>
     </form>

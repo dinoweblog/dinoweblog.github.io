@@ -7,8 +7,9 @@ import Education from "./education/Education";
 import Experience from "./experience/Experience";
 import GithubStats from "./githubStats/GithubStats";
 import AnimatedSection from "../animation";
+import { useFirestoreCollection } from "../../app/apis/useFirestore";
 
-const About = () => {
+const About = ({ aboutData }) => {
   const [index, setIndex] = useState(1);
   const handleIndex = (ind) => {
     setIndex(ind);
@@ -37,11 +38,22 @@ const About = () => {
     //   "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
   });
 
+  const {
+    data: experienceData,
+    loading,
+    error,
+  } = useFirestoreCollection(
+    ["experience", "experience"],
+    ["createdAt", "desc"]
+  );
+
+  console.log("Firestore error: ", error);
+
   return (
     <Box className="item" sx={{ transition: "all 400ms" }}>
       <Wrapper page="About Me" title="About Me" color={primary} id="about">
         {/* <AnimatedSection animation="slide-right"> */}
-          <AboutMeInfo />
+        <AboutMeInfo aboutData={aboutData} />
         {/* </AnimatedSection> */}
       </Wrapper>
 
@@ -73,7 +85,11 @@ const About = () => {
                 Education
               </Button>
             </Box>
-            {index === 1 ? <Experience /> : <Education />}
+            {index === 1 ? (
+              <Experience experienceData={experienceData} loading={loading} />
+            ) : (
+              <Education />
+            )}
           </Box>
         </AnimatedSection>
         <AnimatedSection className="animate-scale-in-on-scroll">

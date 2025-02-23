@@ -15,10 +15,11 @@ import {
   IconButton as IconButtonMui,
   List,
   ListItem,
+  Skeleton,
 } from "@mui/material";
-import { projectData } from "./constant";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../animation";
+import { useFirestoreCollection } from "../../app/apis/useFirestore";
 
 const SliderDiv = styled(Slider)`
   margin: auto;
@@ -165,12 +166,30 @@ export const ProjectSlider = () => {
     ],
   };
 
+  const {
+    data: projectsData,
+    loading,
+    error,
+  } = useFirestoreCollection(["projects", "projects"], ["createdAt", "desc"]);
+
   return (
     <Box>
       <SliderDiv ref={(slider) => (sliderRef.current = slider)} {...settings}>
-        {projectData.map((project) => (
-          <ProjectCard key={project.title} data={project} />
-        ))}
+        {loading
+          ? [1, 2, 3, 4, 5, 6].map((i) => (
+              <Skeleton
+                key={i}
+                variant="rectangular"
+                sx={{
+                  width: "100%",
+                  height: { xs: 300, sm: 350, md: 400, lg: 550 },
+                  maxHeight: { xs: 300, sm: 350, md: 400, lg: 550 },
+                }}
+              />
+            ))
+          : projectsData.map((project) => (
+              <ProjectCard key={project.title} data={project} />
+            ))}
       </SliderDiv>
 
       <Box

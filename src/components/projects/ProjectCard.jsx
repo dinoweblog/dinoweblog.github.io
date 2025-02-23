@@ -11,6 +11,7 @@ import {
 import AnimatedSection from "../animation";
 
 const ProjectCard = ({ data, sx }) => {
+  console.log('data: ', data);
   return (
     <AnimatedSection className="animate-scale-in-on-scroll">
       <Box

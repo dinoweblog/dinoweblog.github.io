@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { secondaryText } from "../../app/uiCore/themeColor";
 import React from "react";
@@ -13,9 +13,10 @@ const CustomButton = ({
   href,
   type,
   disabled,
+  isLoading,
 }) => {
   const navigate = useNavigate();
-
+  console.log("CustomButton -> isLoading", isLoading);
   return (
     <Button
       onClick={() => {
@@ -49,10 +50,10 @@ const CustomButton = ({
       href={href}
       type={type}
       target="_blank"
-      disabled={disabled}
+      disabled={disabled || isLoading}
       download
     >
-      {children}
+      {isLoading ? <CircularProgress size={24} color="inherit" /> : children}
     </Button>
   );
 };

@@ -55,7 +55,6 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { FaRegHandPointRight } from "react-icons/fa";
 import { TbPointFilled } from "react-icons/tb";
 
 const ExperienceCard = ({ data }) => {

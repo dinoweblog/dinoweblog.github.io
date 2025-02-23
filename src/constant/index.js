@@ -21,6 +21,189 @@ import {
 } from "react-icons/si";
 import { RiFlutterFill } from "react-icons/ri";
 
+import { LinkedIn, Email, Twitter, GitHub } from "@mui/icons-material";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { BsCodeSlash } from "react-icons/bs";
+import { secondaryText } from "../app/index";
+
+export const socialIcon = [
+  {
+    title: "GitHub",
+    url: "https://github.com/dinoweblog",
+    icon: <GitHub sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
+    style: {
+      right: { xs: "2%", sm: "14%", md: "10%" },
+      top: { xs: "16%", sm: "24%", md: "25%" },
+    },
+  },
+
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/dino-web/",
+    icon: <LinkedIn sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
+    style: {
+      right: { xs: "19%", sm: "30%", md: "27%" },
+      top: { xs: "0%", sm: "12%", md: "10%" },
+    },
+  },
+  {
+    title: "Twitter",
+    url: "https://twitter.com/imD1nesh",
+    icon: <Twitter sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
+    style: {
+      right: { xs: "-6%", sm: "8%", md: "6%" },
+      top: { xs: "39%", sm: "45%", md: "48%" },
+    },
+  },
+  {
+    title: "Email",
+    url: "mailto:dinoweblog@gmail.com",
+    icon: <Email sx={{ fontSize: { xs: 16, sm: 18, md: 24 } }} />,
+    style: {
+      right: { xs: "-1%", sm: "14%", md: "12%" },
+      top: { xs: "64%", sm: "65%", md: "69%" },
+    },
+  },
+];
+
+export const contactDetails = [
+  {
+    name: "Mobile",
+    value: "+918863021199",
+  },
+  {
+    name: "E-mail",
+    value: "dinoweblog@gmail.com",
+  },
+  {
+    name: "Address",
+    value: "Bhagalpur, Bihar, India",
+  },
+];
+
+export const jobTitle = "Full-Stack Developer | Software Engineer | Freelancer";
+
+export const professionalSummary =
+  "Full-Stack Developer with 3.5+ years of experience building scalable web applications. Skilled in frontend and backend development, contributing to 15+ projects across various domains. Proficient in modern technologies, best practices, and performance optimization. Strong problem-solving, collaboration, and code quality focus.";
+
+export const education = [
+  {
+    date: "2021-2022",
+    degree: "Full Stack Development",
+    university: "Masai School, Bangalore",
+    details:
+      "I completed a full stack development course from Masai School. I learned various things over here with coding skills, like soft skills, and communication skills. For coding, I learned ReactJs, Redux, NodeJs, ExpressJs, MongoDB, JavaScript, and HTML/CSS. Here I built 30+ small and big projects. I worked on some collaborative projects, like- an e-commerce website, a booking app, etc.",
+    techStack:
+      "ReactJs, Redux, NodeJs, ExpressJs, MongoDB, JavaScript, HTML/CSS.",
+  },
+  {
+    date: "2013-2017",
+    degree: "Bachelor of Computer Application",
+    university: "Lovely Professional University, Bhagalpur",
+    details:
+      "I completed a BCA from Lovely Professional University in 2017. In BCA, I got 7.77 CGPA. During BCA, I learned some programming languages like- C, C++, and Java. I built some projects inventory and I made some games like- sudoku and dice.",
+  },
+];
+
+export const services = [
+  {
+    type: "Web App",
+    title: "Freelancing",
+  },
+  {
+    type: "Frontend",
+    title: "Development",
+  },
+  {
+    type: "Backend",
+    title: "Development",
+  },
+  {
+    type: "Services",
+    title: "AWS / Firebase",
+  },
+];
+
+export const skills = [
+  {
+    title: "Development",
+    subTitle: "Frontend",
+    icon: <BsCodeSlash style={{ fontSize: 80, color: secondaryText }} />,
+    skills: [
+      "React",
+      "Redux",
+      "JavaScript",
+      "TypeScript",
+      "Next.js",
+      "Angular",
+      "Apollo-client",
+      "Material-UI",
+      "HTML/CSS",
+      "Git",
+    ],
+  },
+  {
+    title: "Development",
+    subTitle: "Backend",
+    icon: <BsCodeSlash style={{ fontSize: 80, color: secondaryText }} />,
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "TimescaleDB",
+      "Multer",
+      "Mongoose / Typegoose",
+      "Graphql(type-graphql)",
+      "@aws-sdk",
+      "Razorpay",
+      "PhonePe",
+      "Nodemailer",
+      "Sharp/Jimp",
+    ],
+  },
+  {
+    title: "AWS Services",
+    subTitle: "Services",
+    icon: (
+      <MdOutlineMiscellaneousServices
+        style={{ fontSize: 80, color: secondaryText }}
+      />
+    ),
+    skills: [
+      "AWS S3 Storage",
+      "AWS Cognito",
+      "AWS Amplify",
+      "AWS Lambda",
+      "AWS CloudWatch",
+      "AWS API Gateway",
+      "AWS Route 53",
+      "AWS Kinesis",
+      "AWS CloudFront",
+      "AWS Amazon EventBridge",
+      "AWS Elastic Container Service",
+      "AWS Elastic Container Registry",
+    ],
+  },
+  {
+    title: "Firebase/Other Services",
+    subTitle: "Services",
+    icon: (
+      <MdOutlineMiscellaneousServices
+        style={{ fontSize: 80, color: secondaryText }}
+      />
+    ),
+    skills: [
+      "Firebase Storage",
+      "Firestore Database",
+      "Razorpay",
+      "PhonePe",
+      "OneSignal (Notification)",
+      "Shiprocket",
+      "Grafana",
+    ],
+  },
+];
+
 const CSS = {
   logo: <TbBrandCss3 />,
   name: "CSS",
@@ -197,13 +380,32 @@ export const projectData = [
     url: "https://millat.co/",
   },
   {
-    title: "CV Builder",
+    title: "CV Builder - Millat",
     image: "./assets/projects/cv-builder.jpg",
     description:
       "CV Builder is an intuitive web application that enables users to create professional resumes with customizable templates. It features a user-friendly interface for adding personal details, academic history, work experience, skills, and other sections. The platform offers modern, recruiter-approved designs with real-time previews and PDF export functionality.",
     techStack: [React, Nodejs, Express, Mongodb, Mui],
     githubUrl: "https://github.com/dinoweblog",
     url: "https://smartmaulvi.com/",
+  },
+  {
+    title: "Community Of Gamers - Good-Game-Nation",
+    image: "./assets/projects/ggn.png",
+    description:
+      "Bootstrapped the platform from scratch and contributed to building the biggest community of gamers. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
+    techStack: [
+      React,
+      Redux,
+      Typescript,
+      Nodejs,
+      Express,
+      Mongodb,
+      Jest,
+      Apollographql,
+      Mui,
+    ],
+    githubUrl: "https://github.com/dinoweblog",
+    url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
   },
   {
     title: "E-commerce Website - AapkaFashion",
@@ -223,26 +425,6 @@ export const projectData = [
     techStack: [React, Redux, Nodejs, Express, Mongodb, CSS],
     githubUrl: "https://github.com/dinoweblog/Pet-Boarding-Site-FB",
     url: "https://petcare.vercel.app/",
-  },
-
-  {
-    title: "Good Game Nation Project",
-    image: "./assets/projects/ggn.png",
-    description:
-      "I worked as a MERN stack developer at GGN project. I created many things here, auth page, schedule page(calendar, shows upcoming events), tournament page, team profile page, post feed page. In Post Feed Page, user can post (like - facebook post), also user can be post likes and comments.",
-    techStack: [
-      React,
-      Redux,
-      Typescript,
-      Nodejs,
-      Express,
-      Mongodb,
-      Jest,
-      Apollographql,
-      Mui,
-    ],
-    githubUrl: "https://github.com/dinoweblog",
-    url: "https://main.d36ng4ja7wbcyq.amplifyapp.com/",
   },
 
   {

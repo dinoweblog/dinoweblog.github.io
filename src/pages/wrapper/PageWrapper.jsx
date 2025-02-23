@@ -11,7 +11,7 @@ const style = {
   display: { xs: "none", sm: "block" },
 };
 
-const PageWrapper = ({ children, pageTitle, page }) => {
+const PageWrapper = ({ children, pageTitle, page, sx }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageTitle]);
@@ -27,6 +27,7 @@ const PageWrapper = ({ children, pageTitle, page }) => {
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
+          ...sx,
         }}
       >
         <Typography variant="h1">{pageTitle}</Typography>

@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import { secondary } from "../app/index";
 import { SkillsCard } from "../components";
-import { skills } from "../components/skills/constant";
 import PageWrapper from "./wrapper/PageWrapper";
+import { skills } from "../constant";
 
 const SkillsPage = () => {
   return (

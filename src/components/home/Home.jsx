@@ -1,11 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, Skeleton } from "@mui/material";
 import { primary } from "../../app/uiCore/themeColor";
 import CircleBorder from "../../design/CircleBorder2";
 import Info from "../../design/Info";
 import ProfilePicWithIcon from "../../design/ProfilePicWithIcon";
 import AnimatedSection from "../animation";
 
-const Home = () => {
+const Home = ({ aboutData, loading }) => {
   return (
     <Box
       sx={{
@@ -43,9 +43,10 @@ const Home = () => {
           }}
         >
           <AnimatedSection animation="slide-left">
-            <Info />
+            <Info aboutData={aboutData} isLoading={loading} />
           </AnimatedSection>
         </Box>
+
         <Box
           sx={{
             flex: {
@@ -59,7 +60,18 @@ const Home = () => {
           }}
         >
           <AnimatedSection animation="slide-right">
-            <ProfilePicWithIcon />
+            {loading ? (
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 300, md: 550 },
+                  height: { xs: 381, md: 550 },
+                  bgcolor: "grey.800",
+                }}
+              />
+            ) : (
+              <ProfilePicWithIcon />
+            )}
           </AnimatedSection>
         </Box>
 
@@ -68,7 +80,7 @@ const Home = () => {
           sx={{ display: { xs: "block", sm: "block", md: "none" } }}
         >
           <AnimatedSection animation="slide-left">
-            <Info />
+            <Info aboutData={aboutData} isLoading={loading} />
           </AnimatedSection>
         </Box>
       </Box>

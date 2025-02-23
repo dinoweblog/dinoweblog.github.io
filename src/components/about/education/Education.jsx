@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { education } from "../constants";
 import ContentCard from "./ContentCard";
+import { education } from "../../../constant";
 
 const Education = () => {
   return (

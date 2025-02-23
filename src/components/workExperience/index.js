@@ -54,7 +54,45 @@ export const experienceData2 = [
   },
 ];
 
+// Grafana
+
 export const experienceData = [
+  {
+    position: "Full-Stack Engineer",
+    comapny: "Divish Mobility Pvt Ltd (BatteryPool), Pune",
+    description:
+      "Led and developed multiple platforms with optimized performance and scalable architecture.",
+    date: "Jul 2024 - Present",
+    roles: [
+      {
+        title: "My Responsibility",
+        points: [
+          "Led the development of a mobile app, company website, e-commerce platform, role-based dashboard, travel booking system, and resume builder.",
+          "Completed the majority of tasks, including architecture design, feature implementation, and deployment.",
+          "Ensured responsive design, optimized performance, and seamless user experience.",
+        ],
+      },
+      {
+        title: "Key Features Developed",
+        points: [
+          "E-commerce: Cart, payment gateway, order tracking, and referral system.",
+          "Travel Booking: Destination search, booking system, and payment integration.",
+          "Admin Dashboard: Role-based access for inventory, orders, users, and content management.",
+          "Resume builder with live previews and multiple templates.",
+          "Additional Features: Prayer tracker, referral system with coin rewards, user feedback, and product review system.",
+        ],
+      },
+      {
+        title: "Tech Stack / Services",
+        points: [
+          "Frontend: Angular, React.js, Tailwind CSS, Material-UI, Redux",
+          "Backend: AWS Lambda & API Gateway (Node.js), Firestore, Timescaledb",
+          "Cloud & DevOps: Firebase, GCP, AWS (Lambda, IoT Core, EC2, ECS, Amplify, API Gateway, CloudWatch, S3, Step Functions, EventBridge, Kinesis, SQS, Cognito), CI/CD, MQTT, GitHub Actions",
+          "Integrations & Tools: Razorpay, Grafana, Docker",
+        ],
+      },
+    ],
+  },
   {
     position: "Software Development Engineer",
     comapny: "Linger Lifecycle Pvt Ltd (Millat), Lucknow",
@@ -76,16 +114,17 @@ export const experienceData = [
           "E-commerce: Cart, payment gateway, order tracking, and referral system.",
           "Travel Booking: Destination search, booking system, and payment integration.",
           "Admin Dashboard: Role-based access for inventory, orders, users, and content management.",
-          "Additional Features: Prayer tracker, resume builder with live previews.",
+          "Resume builder with live previews and multiple templates.",
+          "Additional Features: Prayer tracker, referral system with coin rewards, user feedback, and product review system.",
         ],
       },
       {
-        title: "Tech Stack",
+        title: "Tech Stack / Services",
         points: [
           "Frontend: React.js, Next.js, TypeScript, Tailwind CSS, Material-UI, Redux",
           "Backend: Node.js, Express.js, MongoDB",
           "Cloud & DevOps: AWS (EC2, S3, ECS, Route 53, Amplify), CI/CD, GitHub Actions",
-          "Integrations: Razorpay, PhonePe, JWT, OAuth, OneSignal ",
+          "Integrations & Tools: Razorpay, PhonePe, JWT, OAuth, Shiprocket, OneSignal",
         ],
       },
     ],
@@ -108,7 +147,17 @@ export const experienceData = [
         ],
       },
       {
-        title: "Tech Stack",
+        title: "Key Features Developed",
+        points: [
+          "Authentication: Secure login with AWS Cognito, role-based access, 2FA, and password recovery.",
+          "My Schedules: Calendar-based match & event scheduling, availability tracking, and Google Calendar sync.",
+          "My Teams: Team management with roster updates, player roles, invites, and announcements.",
+          "Tournaments: Auto-generated fixtures, live brackets, score updates, and leaderboards.",
+          "Feeds: Social feed for posting, liking, commenting, with real-time updates and content moderation.",
+        ],
+      },
+      {
+        title: "Tech Stack / Services",
         points: [
           "Frontend: React.js, TypeScript, Material-UI, Redux, Apollo Client, Storybook",
           "Backend: Node.js, Express.js, MongoDB, Typegoose, Apollo Server, Type-GraphQL",

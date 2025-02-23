@@ -1,9 +1,11 @@
+import React from "react";
+import { Box, Typography, Skeleton } from "@mui/material";
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
 import { secondaryText } from "../app/index";
 import ResumeBtn from "../components/button/ResumeBtn";
+import { jobTitle } from "../constant";
 
-const Info = () => {
+const Info = ({ aboutData, isLoading }) => {
   return (
     <Box
       sx={{
@@ -23,42 +25,84 @@ const Info = () => {
           display: "inline-block",
         }}
       >
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: {
-              xs: "2rem !important",
-              sm: "3rem !important",
-              md: "4rem !important",
-            },
-            fontWeight: 500,
-          }}
-        >
-          Hello! I’m
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: {
-              xs: "2.5rem !important",
-              sm: "4rem !important",
-              md: "5rem !important",
-            },
-          }}
-        >
-          Dinesh Sharma
-        </Typography>
+        {isLoading ? (
+          <>
+            <Skeleton
+              variant="text"
+              width="60%"
+              sx={{ bgcolor: "grey.800", height: { xs: 50, md: 80 } }}
+            />
+            <Skeleton
+              variant="text"
+              width="85%"
+              sx={{ bgcolor: "grey.800", height: { xs: 60, md: 90 } }}
+            />
+          </>
+        ) : (
+          <>
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: {
+                  xs: "2rem !important",
+                  sm: "3rem !important",
+                  md: "4rem !important",
+                },
+                fontWeight: 500,
+              }}
+            >
+              Hello! I’m
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: {
+                  xs: "2.5rem !important",
+                  sm: "4rem !important",
+                  md: "5rem !important",
+                },
+              }}
+            >
+              {`${aboutData?.name || "Dinesh Sharma"}`}
+            </Typography>
+          </>
+        )}
       </Box>
-      <Typography
-        variant="body1"
-        sx={{ color: (theme) => theme.palette.secondary.main }}
-      >
-        Full Stack Developer & Freelancer
-      </Typography>
 
-      <ResumeBtn endIcon={<KeyboardDoubleArrowRight />} style={{ mt: 4 }}>
-        Get Resume
-      </ResumeBtn>
+      {isLoading ? (
+        <Skeleton
+          variant="text"
+          width="70%"
+          sx={{ bgcolor: "grey.800", height: { xs: 40, md: 70 } }}
+        />
+      ) : (
+        <Typography
+          variant="body1"
+          sx={{ color: (theme) => theme.palette.secondary.main }}
+        >
+          {aboutData?.jobTitle || jobTitle}
+        </Typography>
+      )}
+
+      {isLoading ? (
+        <Skeleton
+          variant="rectangular"
+          width="60%"
+          sx={{
+            borderRadius: "4px",
+            bgcolor: "grey.800",
+            height: { xs: 50, md: 60 },
+          }}
+        />
+      ) : (
+        <ResumeBtn
+          endIcon={<KeyboardDoubleArrowRight />}
+          style={{ mt: 4 }}
+          href={aboutData?.resumeDriverLink}
+        >
+          Get Resume
+        </ResumeBtn>
+      )}
     </Box>
   );
 };
