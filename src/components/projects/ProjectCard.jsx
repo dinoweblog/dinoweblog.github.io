@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { CustomButton } from "../button";
 import IconHoverWithName from "./IconHoverWithName";
@@ -11,7 +12,10 @@ import {
 import AnimatedSection from "../animation";
 
 const ProjectCard = ({ data, sx }) => {
-  console.log('data: ', data);
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
     <AnimatedSection className="animate-scale-in-on-scroll">
       <Box
@@ -62,16 +66,18 @@ const ProjectCard = ({ data, sx }) => {
               width: "100%",
               position: "absolute",
               overflow: "hidden",
-              "&:hover": {
+              ...(isHovered && {
                 p: { xs: 2, sm: 3, md: 4 },
                 top: { xs: "16px", sm: "24px", md: "32px" },
                 img: {
                   animation: "scrollImage 10s linear infinite",
                 },
-              },
+              }),
             }}
           >
             <Box
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               component="img"
               alt={data.title}
               src={data.image}
